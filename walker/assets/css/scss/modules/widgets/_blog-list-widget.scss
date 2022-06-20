@@ -1,0 +1,54 @@
+/* ==========================================================================
+   #Blog List Widget
+   ========================================================================== */
+
+.edgtf-blog-list-widget {
+
+    aside.edgtf-sidebar & {
+        margin: 0 0 50px;
+    }
+
+    > h4 {
+        margin: 0 0 24px;
+    }
+
+    .edgtf-blog-list-holder {
+
+        .edgtf-blog-list {
+
+            > li {
+                margin: 0 0 28px;
+                padding: 0;
+                border-bottom: 1px solid #e0e0e0;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+
+        .edgtf-blh-inner {
+            margin: 0;
+        }
+
+        .edgtf-bli-image {
+            margin: 5px 0 22px;
+        }
+
+        .edgtf-item-text-holder {
+            padding: 0px 4px 17px;
+        }
+
+        .edgtf-bli-info {
+            margin: 0 0 6px;
+        }
+
+        .edgtf-bli-excerpt {
+            margin: 0 0 7px;
+        }
+
+        .edgtf-bli-read-more-holder {
+            margin: 7px 0 10px;
+        }
+    }
+}

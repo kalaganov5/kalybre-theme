@@ -1,0 +1,78 @@
+@media only screen and (max-width: $ipad-landscape) { // active content width - 768px
+    .edgtf-pricing-tables.edgtf-four-columns .edgtf-price-table {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
+    .edgtf-pricing-tables.edgtf-big-space {
+
+        .edgtf-pricing-tables-inner {
+            margin: 0 -15px;
+        }
+
+        .edgtf-price-table {
+            padding: 0 15px;
+        }
+    }
+
+    .edgtf-price-table {
+
+        .edgtf-price-table-inner {
+
+            ul {
+                li {
+                    padding: 14px 25px;
+
+                    &.edgtf-table-title {
+                        padding: 24px 25px 22px;
+                    }
+
+                    &.edgtf-table-prices {
+
+                        .edgtf-price {
+                            font-size: 50px;
+                        }
+                    }
+
+                    &.edgtf-price-button {
+                        padding: 2px 25px 28px;
+                    }
+                }
+            }
+        }
+
+        &.edgtf-title-in-price {
+
+            .edgtf-price-table-inner {
+
+                ul {
+
+                    li {
+
+                        &.edgtf-table-prices {
+
+                            .edgtf-price {
+                                font-size: 44px;
+                                line-height: 36px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $phone-landscape) and (max-width: $ipad-portrait) {
+    .edgtf-pricing-tables.edgtf-three-columns .edgtf-price-table {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: $phone-landscape) {
+    .edgtf-pricing-tables .edgtf-price-table {
+        width: 100% !important;
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,67 @@
+/* ==========================================================================
+# Message style - begin
+========================================================================== */
+/* Unique style for both types  - begin
+========================================================================== */
+.edgtf-message {
+    position: relative;
+    padding: 21px 21px 21px 30px;
+    margin: 0;
+    background-color: #f4f4f4;
+
+    .edgtf-message-inner {
+        position: relative;
+        padding: 0 20px 0 0;
+
+        .edgtf-message-text {
+            display: table;
+            height: 100%;
+
+            .edgtf-message-text-inner {
+                display: table-cell;
+                height: 100%;
+                vertical-align: middle;
+
+                > * {
+                    margin: 0;
+                }
+            }
+        }
+
+        a.edgtf-close {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            color: $default-heading-color;
+            font-size: 30px;
+            line-height: 1;
+            @include edgtfTransform(translateY(-50%));
+        }
+    }
+}
+
+/* Unique style for both types - end
+========================================================================== */
+
+/* Type with icon - begin
+========================================================================== */
+.edgtf-message.edgtf-with-icon {
+
+    .edgtf-message-icon-holder {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: inherit;
+        font-size: 22px;
+    }
+
+    .edgtf-message-inner {
+        padding: 0 20px 0 35px;
+    }
+}
+
+/* Type with icon - end
+========================================================================== 
+/* ==========================================================================
+# Message style - end
+========================================================================== */

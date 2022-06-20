@@ -1,0 +1,90 @@
+/* ==========================================================================
+# Pie Chart Basic - begin
+========================================================================== */
+
+.edgtf-pie-chart-holder {
+    position: relative;
+    display: block;
+
+    .edgtf-percentage {
+        position: relative;
+        display: block;
+        height: 128px;
+        width: 128px;
+        line-height: 128px;
+        text-align: center;
+        margin: 0 auto;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        @include edgtfTransition(opacity $default-transition-speed ease-out);
+    }
+
+    .edgtf-percentage canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .edgtf-to-counter {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+
+        .edgtf-to-counter-inner {
+            position: relative;
+            display: inline-block;
+            margin: 0 auto;
+            vertical-align: middle;
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 1em;
+            letter-spacing: 1px;
+            color: $default-heading-color;
+
+            &:after {
+                position: relative;
+                top: 0px;
+                right: 0px;
+                content: "%";
+                letter-spacing: 0;
+            }
+        }
+
+        .edgtf-to-counter-icon {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            height: 72px;
+            line-height: 72px;
+            width: 72px;
+            font-size: 47px;
+            color: $default-heading-color;
+
+            > * {
+                display: block;
+                line-height: inherit;
+
+                &:before {
+                    display: block;
+                    line-height: inherit;
+                }
+            }
+        }
+
+        img {
+            vertical-align: middle;
+        }
+    }
+
+    .edgtf-pie-chart-text {
+        text-align: center;
+        margin: 32px 0 0;
+
+        .edgtf-pie-title {
+            margin: 0 0 12px;
+        }
+    }
+}
+/* ==========================================================================
+# Pie Chart Basic - end
+========================================================================== */

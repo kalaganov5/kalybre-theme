@@ -1,0 +1,91 @@
+/* ==========================================================================
+# Interactive Banner responsive style - begin
+========================================================================== */
+
+@include ipad-landscape {
+
+    .edgtf-interactive-banner-holder {
+
+        .edgtf-interactive-banner-info {
+
+            &.edgtf-responsive-on-tablet-landscape {
+                position: relative;
+                margin: 18px 0 0;
+                padding: 0 !important;
+                text-align: left !important;
+
+                .edgtf-interactive-banner-title {
+                    margin: 0 0 3px;
+                }
+            }            
+        }
+    }
+}
+
+@include ipad-portrait {
+
+    .edgtf-interactive-banner-holder {
+
+        .edgtf-interactive-banner-info {
+
+            &.edgtf-responsive-on-tablet-portrait {
+                position: relative;
+                margin: 18px 0 0;
+                padding: 0 !important;
+                text-align: left !important;
+
+                .edgtf-interactive-banner-title {
+                    margin: 0 0 3px;
+                }
+            }
+
+            .edgtf-interactive-banner-description {
+                font-size: 14px;
+                line-height: 26px;
+            }
+        }
+    }
+}
+
+@include phone-landscape {
+
+    .edgtf-interactive-banner-holder {
+
+        .edgtf-interactive-banner-info {
+
+            &.edgtf-responsive-on-mobile-landscape {
+                position: relative;
+                margin: 18px 0 0;
+                padding: 0 !important;
+                text-align: left !important;
+
+                .edgtf-interactive-banner-title {
+                    margin: 0 0 3px;
+                }
+            }            
+        }
+    }
+}
+
+@include phone-portrait {
+
+    .edgtf-interactive-banner-holder {
+
+        .edgtf-interactive-banner-info {
+
+            &.edgtf-responsive-on-mobile-portrait {
+                position: relative;
+                margin: 18px 0 0;
+                padding: 0 !important;
+                text-align: left !important;
+
+                .edgtf-interactive-banner-title {
+                    margin: 0 0 3px;
+                }
+            }            
+        }
+    }
+}
+/* ==========================================================================
+# Interactive Banner responsive style - end
+========================================================================== */

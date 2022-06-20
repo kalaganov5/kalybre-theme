@@ -1,0 +1,246 @@
+/* ==========================================================================
+   WooCommerce Checkout Page styles - begin
+   ========================================================================== */
+
+.edgtf-woocommerce-page {
+
+    .checkout_coupon {
+        display: block;
+        margin: 0 0 34px;
+
+        p {
+            margin: 0;
+        }
+
+        .button {
+            height: 38px;
+            line-height: 38px;
+            padding: 0 28px;
+        }
+    }
+
+    &.woocommerce-checkout form.login {
+        display: block;
+        margin: 0 0 34px;
+
+        > *:first-child {
+            margin: 0 0 15px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .button {
+            height: 38px;
+            line-height: 38px;
+            padding: 0 28px;
+        }
+
+        input[type='checkbox'] {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            top: -1px;
+            margin: 0 3px 0 5px;
+        }
+
+        .lost_password {
+            display: block;
+            margin: 15px 0 0;
+
+            a {
+                color: $default-heading-color;
+                font-weight: 500;
+
+                &:hover {
+                    color: $first-main-color;
+                }
+            }
+        }
+    }
+
+    .woocommerce-checkout .col2-set:before,
+    .woocommerce-checkout .col2-set:after {
+        content: '';
+        display: table;
+    }
+
+    .woocommerce-checkout .col2-set:after {
+        clear: both;
+    }
+
+    .woocommerce-checkout {
+
+        .col-1,
+        .col-2 {
+            position: relative;
+            display: inline-block;
+            width: 49%;
+            margin-right: 1%;
+            float: left;
+            vertical-align: middle;
+
+            h3 {
+                margin: 8px 0 25px;
+            }
+
+            p {
+                margin: 0;
+            }
+
+            label:not(.checkbox) {
+                display: block;
+                margin: 0 0 5px;
+            }
+
+            .form-row {
+                width: 49%;
+                margin-right: 2%;
+                float: left;
+            }
+
+            .form-row-last {
+                margin-right: 0;
+            }
+
+            .form-row-wide,
+            .form-row.notes {
+                width: 100%;
+            }
+        }
+
+        .col-2 {
+            margin-left: 1%;
+            margin-right: 0;
+        }
+
+        .create-account {
+            margin: 0 0 15px;
+
+            input, label {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+
+        h3#order_review_heading {
+            margin: 24px 0 28px;
+        }
+
+        table {
+            border: 1px solid $default-border-color;
+            padding: 0;
+            margin: 0 0 35px;
+
+            tr {
+                border: 0;
+                border-bottom: 1px solid $default-border-color;
+
+                &.order-total {
+
+                    .amount {
+                        color: $default-heading-color;
+                    }
+                }
+
+                &.shipping {
+
+                    #shipping_method {
+                        list-style: none;
+                        margin: 0;
+
+                        li {
+                            margin: 3px 0;
+                            padding: 0;
+
+                            > * {
+                                display: inline-block;
+                                vertical-align: middle;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            td, th {
+                padding: 17px 25px;
+                text-align: left;
+                vertical-align: middle;
+            }
+
+            th {
+                border: 0;
+                color: $default-heading-color;
+            }
+
+            .variation {
+
+                > * {
+                    display: inline-block;
+                    vertical-align: middle;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                p {
+                    margin: 0;
+                }
+            }
+        }
+
+        .select2-container {
+            border-radius: 0;
+        }
+
+        input[type='radio'],
+        input[type='checkbox'] {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            top: -1px;
+            margin: 0 3px 0 5px;
+        }
+
+        .woocommerce-checkout-payment {
+            display: block;
+            margin: 20px 0 60px;
+
+            ul {
+                list-style: none;
+                margin: 0 0 35px;
+                padding: 0;
+                border: 1px solid $default-border-color;
+
+                li {
+                    padding: 17px 25px;
+                    border-bottom: 1px solid $default-border-color;
+
+                    &:last-child {
+                        border-bottom: 0;
+                    }
+
+                    input, label {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+
+                    &.payment_method_paypal {
+
+                        label {
+
+                            img {
+                                vertical-align: middle;
+                                margin: 0 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Checkout Page styles - end
+   ========================================================================== */

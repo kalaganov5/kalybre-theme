@@ -1,0 +1,332 @@
+/* ==========================================================================
+   WooCommerce Cart Page styles - begin
+   ========================================================================== */
+.edgtf-woocommerce-page {
+
+    table.cart {
+
+        thead {
+
+            tr {
+
+                th {
+                    color: $default-heading-color;
+                    font-size: 12px;
+                    line-height: 1.2em;
+                    font-weight: 500;
+                    letter-spacing: 2.5px;
+                    padding: 20px 10px;
+                    text-align: left;
+
+                    &.product-remove {
+                        padding: 20px 10px 20px 40px;
+                    }
+                }
+            }
+        }
+
+        tbody {
+
+            tr:not(.cart_item) {
+                border: 0;
+            }
+        }
+
+        tr.cart_item {
+            border-top: 0;
+
+            td {
+                padding: 25px 10px;
+                vertical-align: middle;
+                text-align: inherit;
+
+                &.product-remove {
+                    padding: 25px 10px 25px 40px;
+
+                    a {
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-family: 'Ionicons';
+                        speak: none;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: none;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                        font-size: 0;
+                        line-height: 1;
+                        color: $default-heading-color;
+
+                        &:hover {
+                            color: $first-main-color;
+                        }
+
+                        &:before {
+                            display: block;
+                            font-size: 34px;
+                            content: "\f404";
+                        }
+                    }
+                }
+
+                &.product-name {
+
+                    a {
+                        display: inline-block;
+                        vertical-align: middle;
+                        color: $default-text-color;
+
+                        img {
+                            display: block;
+                            max-width: 106px;
+                            margin: 0 21px 0 0;
+                        }
+
+                        &:hover {
+                            color: $default-heading-color;
+                        }
+                    }
+
+                    .edgtf-product-name {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+
+                .variation {
+
+                    > * {
+                        display: inline-block;
+                        vertical-align: middle;
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        td.actions {
+            padding: 35px 0 34px;
+            text-align: inherit;
+
+            .coupon {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                float: left;
+
+                label {
+                    display: none;
+                }
+
+                input[type="text"] {
+                    margin: 0 22px 0 0;
+                }
+            }
+
+            .button {
+                height: 44px;
+                line-height: 44px;
+                padding: 0 36px;
+            }
+
+            > input {
+                float: right;
+            }
+        }
+    }
+
+    .cart-collaterals {
+        @include edgtfRelativeHolderLayout;
+        margin: 0 0 40px;
+
+        h2 {
+            position: relative;
+            display: block;            
+            margin: 0 0 45px;
+        }
+
+        table {            
+            margin: 0 0 35px;
+
+            tr {
+
+                &:not(:first-child) {
+                    border-top: 0;
+                }
+
+                &.order-total {
+
+                    .amount {
+                        color: $default-heading-color;
+                    }
+                }
+            }
+
+            td, th {
+                padding: 17px 25px;
+                text-align: left;
+                vertical-align: middle;
+            }
+
+            th {
+                width: 20%;
+                border: 0;
+                color: $default-heading-color;
+            }
+        }
+
+        tr.shipping {
+
+            #shipping_method {
+                list-style: none;
+                margin: 0 0 7px;
+
+                li {
+                    margin: 3px 0;
+                    padding: 0;
+
+                    > * {
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .woocommerce-shipping-calculator {
+
+            .shipping-calculator-button {
+                display: block;
+                margin: 0 0 10px;
+                color: $default-heading-color;
+                font-weight: 500;
+
+                &:hover {
+                    color: $first-main-color;
+                }
+            }
+
+            button {
+                height: 38px;
+                line-height: 38px;
+                padding: 0 28px;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    .cross-sells {
+        margin: 2px 0 0;
+
+        .edgtf-cross-sells-title {
+            position: relative;
+            display: block;
+            margin: 0 0 45px;
+
+            .edgtf-cross-sells-left-part,
+            .edgtf-cross-sells-text,
+            .edgtf-cross-sells-right-part {
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            .edgtf-cross-sells-left-part,
+            .edgtf-cross-sells-right-part {
+                width: 48%;
+                
+                span {
+                    display: block;
+                    height: 1px;
+                    background-color: #ccc;
+                }
+            }
+
+            .edgtf-cross-sells-text {
+                width: 2%;
+                padding: 0 38px;
+                white-space: nowrap;
+            }
+        }
+
+        ul.products  {
+
+            > .product {
+
+                .edgtf-pl-text-wrapper {
+                    margin: 0 0 17px;
+                }
+            }
+        }
+    }
+
+    .cart_totals {
+        margin: 7px 0 20px;
+
+        .edgtf-cart-totals-title {
+            position: relative;
+            display: block;
+            margin: 0 0 45px;
+
+            .edgtf-cart-totals-left-part,
+            .edgtf-cart-totals-text,
+            .edgtf-cart-totals-right-part {
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            .edgtf-cart-totals-left-part,
+            .edgtf-cart-totals-right-part {
+                width: 48%;
+                
+                span {
+                    display: block;
+                    height: 1px;
+                    background-color: #ccc;
+                }
+            }
+
+            .edgtf-cart-totals-text {
+                width: 2%;
+                padding: 0 38px;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+.edgtf-woocommerce-page {
+
+    .cart-empty {
+        position: relative;
+        display: block;
+        font-family: inherit;
+        font-size: 23px;
+        line-height: 1.5em;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-align: center;
+        color: $default-heading-color;
+        margin: 40px 0 33px;
+    }
+
+    .return-to-shop {
+        position: relative;
+        display: block;
+        text-align: center;
+        margin: 0 0 60px;
+    }
+}
+/* ==========================================================================
+   WooCommerce Cart Page styles - end
+   ========================================================================== */

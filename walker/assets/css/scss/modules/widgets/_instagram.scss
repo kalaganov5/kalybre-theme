@@ -1,0 +1,74 @@
+/* ==========================================================================
+   Instagram start styles
+   ========================================================================== */
+
+.widget.widget_edgtf_instagram_widget {
+    margin: 0 0 50px;
+
+    > h4 {
+        margin: 0 0 19px;
+    }
+}   
+
+.edgtf-instagram-feed {
+    list-style: none;
+    margin: 0 -5px -10px;
+    padding: 0;
+
+    li {
+        float: left;
+        padding: 0 5px;
+        margin: 0 0 10px;
+        @include edgtfBoxSizing(border-box);
+
+        a {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0,0,0,.35);
+                opacity: 0;
+                @include edgtfTransition(opacity .4s);
+            }
+            &:hover {
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+
+        img {
+            display: block;
+        }
+    }
+}
+
+.edgtf-instagram-feed.edgtf-col-9 li {
+    width: 11.11111111111111%;
+}
+
+.edgtf-instagram-feed.edgtf-col-6 li {
+    width: 16.66666666666667%;
+}
+
+.edgtf-instagram-feed.edgtf-col-4 li {
+    width: 25%;
+}
+
+.edgtf-instagram-feed.edgtf-col-3 li {
+    width: 33.33%;
+}
+
+.edgtf-instagram-feed.edgtf-col-2 li {
+    width: 50%;
+}
+
+/* ==========================================================================
+   Instagram end styles
+   ========================================================================== */

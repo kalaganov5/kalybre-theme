@@ -1,0 +1,553 @@
+/* ==========================================================================
+   Portfolio filter styles - begin
+   ========================================================================== */
+
+.edgtf-portfolio-filter-holder {
+    @include edgtfRelativeHolderLayout();
+    margin: 0 0 54px;
+    text-align: center;
+    overflow: hidden;
+
+    ul {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+        padding: 0 4px;
+        list-style: none;
+
+        &:before,
+        &:after {
+            position: absolute;
+            top: 50%;            
+            width: 100%;
+            height: 1px;
+            background-color: #ccc;
+            content: '';
+        }
+
+        &:before {
+            left: -100%;
+        }
+
+        &:after {
+            right: -100%;
+        }
+
+        li {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 0 0 2px;
+            padding: 0;
+            text-align: center;                
+            cursor: pointer;
+            
+            span {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                padding: 0 11px;
+                color: $default-text-color;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: 2px;
+                font-weight: 500;
+                text-transform: uppercase;
+                white-space: nowrap;
+                @include edgtfTransition(color 0.15s ease-out);
+
+                &:after {
+                    position: absolute;
+                    right: -5px;
+                    content: '|';
+                    color: $default-text-color;
+                }
+            }
+
+            &:last-child {
+
+                span {
+
+                    &:after {
+                        content: '';
+                    }
+                }
+            }
+
+            &.active,
+            &.current,
+            &:hover {
+
+                span {
+                    color: $default-heading-color;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Portfolio filter styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio shortcode styles - begin
+   ========================================================================== */
+
+.edgtf-portfolio-list-holder-outer {
+    @include edgtfRelativeHolderLayout();
+
+    article {
+        position: relative;
+        margin: 0;
+        vertical-align: top;
+        max-width: 100%;
+        overflow: hidden;
+        @include edgtfBoxSizing(border-box);
+
+        .edgtf-item-image-holder {
+            @include edgtfRelativeHolderLayout();
+
+            a {
+                display: block;
+                position: relative;
+                z-index: 100;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .edgtf-item-text-holder {
+            @include edgtfRelativeHolderLayout();
+        }
+
+        .edgtf-item-title {
+            margin: 21px 0 7px;
+            text-transform: uppercase;
+        }
+
+        .edgtf-ptf-category {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 14px;
+            margin: 0 8px 0 0;
+            padding: 0 8px 0 0;
+
+            &:after {
+                position: absolute;
+                right: -1px;
+                content: '|';
+            }
+
+            &:last-child {
+                margin: 0;
+                padding: 0;
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &.edgtf-ptf-standard,
+    &.edgtf-ptf-gallery,
+    &.edgtf-ptf-pinterest {
+
+        article.mix {
+            display: none;
+            visibility: hidden;
+        }
+    }
+
+    &.edgtf-ptf-standard,
+    &.edgtf-ptf-gallery {
+
+        article {
+            float: left;
+        }
+
+        .edgtf-gap {
+            float: left;
+            display: inline-block;
+            vertical-align: top;
+            height: 0;
+        }
+
+        &.edgtf-with-space {
+
+            .edgtf-portfolio-list-holder {
+                font-size: 0.1px;
+                text-align: justify;
+                margin: 0 -5px;
+
+                article {
+                    text-align: left;
+                    padding: 0 5px;
+                    margin: 10px 0 0;
+                }
+            }
+        }
+
+        $portfolio_columns: ('two', 'three', 'four', 'five', 'six'); // number of columns
+
+        @for $i from 0 to length($portfolio_columns) { // for each column
+            &.edgtf-ptf-#{nth($portfolio_columns,$i+1)}-columns {
+                
+                article,
+                .edgtf-gap {
+                    width: 100% / ($i+2);
+                }
+
+                @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+                    article {
+                        
+                        &:nth-child(#{$i+2}n+1) {
+                            clear: both;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.edgtf-ptf-standard,
+    &.edgtf-ptf-pinterest {
+
+        article {
+
+            &:hover {
+
+                .edgtf-item-image-holder {
+
+                    > a {
+
+                        &:after {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                .edgtf-item-icons-holder {
+
+                    a {
+                        opacity: 1;
+
+                        &:nth-child(1) {
+                            -webkit-transition-delay: .1s;
+                            -moz-transition-delay: .1s;
+                            transition-delay: .1s;
+                        }
+
+                        &:nth-child(2) {
+                            -webkit-transition-delay: .2s;
+                            -moz-transition-delay: .2s;
+                            transition-delay: .2s;
+                        }
+
+                        &:nth-child(3) {
+                            -webkit-transition-delay: .3s;
+                            -moz-transition-delay: .3s;
+                            transition-delay: .3s;
+                        }
+                    }
+                }
+            }
+
+            .edgtf-item-image-holder {
+                @include edgtfRelativeHolderLayout();
+
+                a {
+                    display: block;
+                    position: relative;
+                    z-index: 100;
+                }
+
+                > a {
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(51, 51, 51, 0.8);
+                        opacity: 0;
+                        @include edgtfTransition(opacity .3s cubic-bezier(0.38, 0.76, 0, 0.87));
+                    }
+                }
+            }
+
+            .edgtf-icons-holder {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                text-align: center;
+                z-index: 200;
+                @include edgtfTransform(translate(-50%, -50%));
+            }
+
+            .edgtf-item-icons-holder {
+                @include edgtfRelativeHolderLayout();
+                -webkit-filter: blur(0);
+
+                a {
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin: 0 10px;
+                    font-size: 26px;           
+                    line-height: 1;
+                    color: #fff;
+                    opacity: 0;
+                    @include edgtfTransition(color .2s ease-out, opacity .2s ease-out);
+
+                    &:hover {
+                        color: #ccc;
+                    }
+
+                    &:before {
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: top;
+                        font-family: 'Ionicons';
+                        font-size: inherit;
+                        line-height: inherit;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                    }
+
+                    &.edgtf-portfolio-lightbox:before {
+                        font-size: 1.153846153846154em;
+                        content: "\f424";
+                    }
+
+                    &.edgtf-preview:before {
+                        content: "\f1fe";
+                    }
+
+                    &.edgtf-like{
+
+                        &:before {
+                            content: "\f442";
+                        }
+
+                        &.liked:before {
+                            content: "\f443";
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.edgtf-ptf-standard {
+
+        article {
+
+            .edgtf-item-text-holder {
+                margin: 0 0 30px;
+            }
+        }
+    }
+
+    &.edgtf-ptf-gallery {
+
+        .edgtf-portfolio-item-inner {
+            @include edgtfRelativeHolderLayout();
+        }
+
+        article {
+
+            .edgtf-item-image-holder {
+                overflow: hidden;
+            }
+
+            .edgtf-portfolio-link {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 2;
+            }
+
+            &:hover {
+
+                .edgtf-item-text-overlay {
+                    opacity: 1;
+                    @include edgtfTransition(opacity .3s ease);
+                }
+
+                .edgtf-item-text-overlay-inner {
+                 
+                    .edgtf-item-title {
+                        @include edgtfTransform(translateX(0));
+                        -webkit-transition: -webkit-transform .45s cubic-bezier(0.78, 0.7, 0, 0.94);
+                        -moz-transition: -moz-transform .45s cubic-bezier(0.78, 0.7, 0, 0.94);
+                        transition: transform .45s cubic-bezier(0.78, 0.7, 0, 0.94);
+                    }
+                 
+                    .edgtf-ptf-category-holder {
+                        @include edgtfTransform(translateX(0));
+                        -webkit-transition: -webkit-transform .35s cubic-bezier(0.38, 0.76, 0, 0.88) .1s;
+                        -moz-transition: -moz-transform .35s cubic-bezier(0.38, 0.76, 0, 0.88) .1s;
+                        transition: transform .35s cubic-bezier(0.38, 0.76, 0, 0.88) .1s;
+                    }
+                }
+            }
+        }
+
+        .edgtf-item-text-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(51, 51, 51, 0.8);
+            opacity: 0;
+            @include edgtfTransition(opacity .2s ease-out);
+
+            .edgtf-item-text-overlay-inner {
+                display: table;
+                height: 100%;
+                width: 100%;
+
+                .edgtf-item-text-holder {
+                    display: table-cell;
+                    vertical-align: bottom;
+                    width: calc(100% - 28px);
+                    padding-left: 28px;
+                    padding-bottom: 20px;
+                    text-align: left;
+                    @include edgtfBoxSizing(border-box);
+                }
+
+                .edgtf-item-title {
+                    display: inline-block;
+                    margin: 0;
+                    color: #fff;
+                    @include edgtfTransform(translateX(-100%));
+                    -webkit-transition: -webkit-transform .0s ease .4s;
+                    -moz-transition: -moz-transform .0s ease .4s;
+                    transition: transform .0s ease .4s;
+                }
+
+                .edgtf-ptf-category-holder {
+                    color: #fff;
+                    @include edgtfTransform(translateX(-100%));
+                    -webkit-transition: -webkit-transform .0s ease .4s;
+                    -moz-transition: -moz-transform .0s ease .4s;
+                    transition: transform .0s ease .4s;
+                }
+            }
+        }
+    }
+
+    &.edgtf-ptf-pinterest {
+
+        .edgtf-portfolio-list-holder {
+            opacity: 0;
+        }
+
+        article {
+
+            .edgtf-item-text-overlay {
+                @include edgtfRelativeHolderLayout();
+                margin: 0 0 27px;
+            }
+        }
+
+        .edgtf-ptf-list-paging {
+            opacity: 1;
+        }
+
+        .edgtf-portfolio-list-pinterest-grid-gutter {
+            width: 0;        
+        }
+
+        &.edgtf-with-space {
+
+            .edgtf-portfolio-list-holder {
+                margin: 0 -5px;
+
+                article {
+                    padding: 0 5px;
+                    margin: 10px 0 0;
+                }
+            }
+        }
+
+        $portfolio_pinterest_columns: ('three', 'four', 'five', 'six'); // number of columns
+
+        @for $i from 0 to length($portfolio_pinterest_columns) { // for each column
+            &.edgtf-ptf-pinterest-#{nth($portfolio_pinterest_columns,$i+1)}-columns {
+
+                article,
+                .edgtf-portfolio-list-pinterest-grid-sizer {
+                    width: 100% / ($i+3);
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Portfolio shortcode styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio load more button styles - begin
+   ========================================================================== */
+
+.edgtf-portfolio-list-holder-outer {
+
+    .edgtf-ptf-list-paging {
+        text-align: center;
+        margin: 34px 0 0;
+        opacity: 0; // add opacity via JS for gallery and standard portfolio types
+    }
+
+    &.edgtf-ptf-gallery {
+
+        .edgtf-ptf-list-paging {
+            margin: 60px 0 0;
+        }
+    }
+}
+/* ==========================================================================
+   Portfolio load more button styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio slider styles - begin
+   ========================================================================== */
+
+.edgtf-portfolio-slider-holder {
+    opacity: 0;
+    @include edgtfTransform(scale(.88));
+
+    &.edgtf-appeared {
+        -webkit-transition: opacity .15s ease, -webkit-transform .3s cubic-bezier(0.23, 1, 0.32, 1);
+        transition: opacity .15s ease, transform .3s cubic-bezier(0.23, 1, 0.32, 1);
+        opacity: 1;
+        @include edgtfTransform(scale(1));
+    }
+
+    .edgtf-portfolio-list-holder.owl-carousel {
+
+        .owl-stage.owl-grab {
+            cursor: -webkit-grab;
+            cursor: -moz-grab;
+        }
+    }
+}
+/* ==========================================================================
+   Portfolio slider styles - end
+   ========================================================================== */

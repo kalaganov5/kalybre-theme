@@ -1,0 +1,25 @@
+/* Showcase Carousel Responsive Styles - Start
+   ========================================================================== */
+
+@include ipad-portrait {
+    .edgtf-showcase-carousel {
+        .owl-carousel {
+            .owl-item {
+                @include edgtfTransform(translateZ(0));
+            }
+            .owl-controls {
+                padding: 30px 0 30px;
+            }
+        }
+    }
+}
+
+@include phone-landscape {
+    .edgtf-showcase-carousel {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+/* Showcase Carousel Styles Responsive Styles - End
+  ========================================================================== */

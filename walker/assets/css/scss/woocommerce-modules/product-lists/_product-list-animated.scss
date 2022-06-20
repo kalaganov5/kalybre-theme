@@ -1,0 +1,321 @@
+/* Woocommerce Product List Animated Shortcode - begin
+========================================================================== */
+
+.edgtf-pla-holder {
+    @include edgtfRelativeHolderLayout();
+
+    .edgtf-pla-item {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        float: left;
+        width: 100%;
+        padding: 0;
+        z-index: 100;
+        text-align: center;
+        @include edgtfBoxSizing(border-box);
+        -webkit-transform: translate3d(0,100px,0);
+        -moz-transform: translate3d(0,100px,0);
+        -ms-transform: translate3d(0,100px,0);
+        -o-transform: translate3d(0,100px,0);
+        transform: translate3d(0,100px,0);
+
+        &.edgtf-pla-animated {
+            -webkit-transition-timing-function: ease-out;
+            -moz-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+            -webkit-transition-duration: 1.5s;
+            -moz-transition-duration: 1.5s;
+            transition-duration: 1.5s;
+            -webkit-transition-property: -webkit-transform;
+            -moz-transition-property: -moz-transform;
+            transition-property: transform;
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+
+        &:hover {
+
+            .edgtf-pla-text {
+                opacity: 1;
+            }
+
+            .edgtf-pla-text-wrapper {
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        .touch & {
+            cursor: pointer;
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+    }
+
+    $animated_list_columns: ('two', 'three', 'four', 'five', 'six');
+
+    @for $i from 0 to length($animated_list_columns) { 
+        &.edgtf-#{nth($animated_list_columns,$i+1)}-columns {
+            $column_width: 100%/($i+2);
+
+            .edgtf-pla-item {
+                width: $column_width;
+
+                @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+                    &:nth-child(#{$i+2}n+1) {
+                        clear: both;
+                    }
+                }
+            }
+        }
+    }
+
+    .edgtf-pla-inner {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        overflow: hidden;
+
+        .edgtf-pla-image {
+            @include edgtfRelativeHolderLayout();
+
+            img {
+                display: block;
+                width: 100%;
+            }
+
+            .edgtf-pla-onsale,
+            .edgtf-pla-out-of-stock,
+            .edgtf-pla-new-product {
+                position: absolute;
+                display: block;
+                top: 0;        
+                width: auto;
+                height: 29px;
+                color: #fff;
+                font-size: 10px;
+                line-height: 29px;
+                font-weight: 500;
+                letter-spacing: 2px;
+                padding: 0 20px;
+                margin: 0;
+                background-color: $default-heading-color;
+                text-align: center;
+                z-index: 2;
+                @include edgtfTransform(translateZ(0));
+                @include edgtfBoxSizing(border-box);
+            }
+
+            .edgtf-pla-onsale {
+                left: 0;
+            }
+
+            .edgtf-pla-out-of-stock,
+            .edgtf-pla-new-product {
+                right: 0;
+            }
+        }
+            
+        .edgtf-pla-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            padding: 10px 15px;
+            opacity: 0;
+            background-color: transparent;
+            @include edgtfBoxSizing(border-box);
+            @include edgtfTransition(opacity .2s ease-out, background-color .2s ease-out);
+        }
+
+        .edgtf-pla-text-outer {
+            position: relative;
+            display: table;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        
+            .edgtf-pla-text-inner {
+                position: relative;
+                display: table-cell;
+                width: 100%;
+                height: 100%;
+                vertical-align: middle;
+
+                .button,
+                .added_to_cart {
+                    position: relative;
+                    display: inline-block;
+                    width: auto;
+                    height: 54px;
+                    line-height: 54px;
+                    padding: 0 46px;
+                    margin: 22px 0 0;
+                    font-size: 11px;
+                    font-weight: 500;
+                    letter-spacing: 2px;
+                    color: transparent;
+                    background-color: #fff;          
+                    border: 0;
+                    outline: none;
+                    white-space: nowrap;
+                    cursor: pointer;
+                    vertical-align: middle;
+                    text-transform: uppercase;
+                    z-index: 2;
+                    overflow: hidden;
+                    @include edgtfBoxSizing(border-box);
+                    @include edgtfTransition(color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out);
+
+                    &.edgtf-button-simple {
+                        margin: 0;
+                    }
+
+                    &:before,
+                    &:after {
+                        content: attr(data-title);
+                        position: absolute;
+                        top: 1px;
+                        left: 0;
+                        display: block;
+                        width: 100%;
+                        height: 100%;                
+                        text-align: center;
+                        -webkit-transition: color .2s ease-in-out, -webkit-transform .2s ease-in-out;
+                        -moz-transition: color .2s ease-in-out, -moz-transform .2s ease-in-out;
+                        transition: color .2s ease-in-out, transform .2s ease-in-out;            
+                        -webkit-filter: blur(0);
+                    }
+
+                    &:before {
+                        color: $default-heading-color;
+                        @include edgtfTransform(translateY(0%));
+                    }
+
+                    &:after {
+                        color: transparent;
+                        @include edgtfTransform(translateY(40%));
+                    }
+
+                    &:hover {
+                        color: transparent;
+                        background-color: #fff;
+                        
+                        &:before {
+                            color: transparent;
+                            @include edgtfTransform(translateY(-40%));
+                        }
+
+                        &:after {
+                            color: $default-heading-color;
+                            @include edgtfTransform(translateY(0%));
+                        }
+                    }
+                }
+
+                .added_to_cart {
+
+                    &:before,
+                    &:after {
+                        content: attr(title);
+                    }
+                }
+
+                .button.added {
+                    display: none;
+                }
+            }
+        }
+
+        .edgtf-pla-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .edgtf-pla-text-wrapper {
+        @include edgtfRelativeHolderLayout();
+        margin: 0 0 31px;
+        top: 30px;
+        opacity: 0;
+        @include edgtfTransition(opacity .2s ease-in-out, top .3s ease-in-out);
+
+        .edgtf-pla-title {
+            margin: 26px 0 14px;
+            text-transform: uppercase;
+        }
+
+        .edgtf-pla-price {
+            font-size: 16px;
+            line-height: 1;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin: 14px 0 7px;
+            color: $default-heading-color;
+
+            * {
+                font-size: inherit;
+                line-height: inherit;
+            }
+
+            del {
+                color: $default-text-color;
+            }
+
+            ins {
+                text-decoration: none;
+            }
+        }
+
+        .edgtf-pla-rating-holder {
+            @include edgtfRelativeHolderLayout();
+            line-height: 1;
+            margin: 10px 0 20px;
+        }
+
+        .edgtf-pla-rating {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            font-family: "ElegantIcons";
+            font-size: 12px;
+            line-height: 1;
+            letter-spacing: 3px;
+            color: $default-heading-color;                
+            overflow: hidden;
+            -webkit-font-smoothing: antialiased;
+
+            &:before {
+                content: "\e031\e031\e031\e031\e031";
+            }
+
+            span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                overflow: hidden;
+
+                &:before {
+                    content: "\e033\e033\e033\e033\e033";
+                }
+            }
+        }
+    }
+}
+
+/* Woocommerce Product List Animated Shortcode - end
+========================================================================== */

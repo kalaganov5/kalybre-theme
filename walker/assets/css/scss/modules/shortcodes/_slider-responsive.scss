@@ -1,0 +1,120 @@
+@include laptop-landscape-large {
+
+	.carousel {
+
+		.carousel-control {
+
+			&.edgtf-custom-nav {
+
+				.edgtf-prev-nav {
+					left: 35px;
+				}
+
+				.edgtf-next-nav {
+					right: 35px;
+				}
+			}
+		}
+
+		.carousel-indicators {
+			right: 35px;
+
+			&.edgtf-position-left {
+				left: 35px;
+			}
+		}
+	}
+}
+
+@include ipad-landscape {
+    .carousel-inner{
+        position: relative;
+    }
+
+    .carousel-inner > .item,
+    .edgtf-slider .carousel-control,
+    .edgtf-slider-elements-container{
+        padding-top: 0px !important;
+    }
+
+    .carousel-inner .item.edgtf-animate-image.zoom_center .edgtf-image,
+    .carousel-inner .item.edgtf-animate-image.zoom_top_left .edgtf-image,
+    .carousel-inner .item.edgtf-animate-image.zoom_top_right .edgtf-image,
+    .carousel-inner .item.edgtf-animate-image.zoom_bottom_left .edgtf-image,
+    .carousel-inner .item.edgtf-animate-image.zoom_bottom_right .edgtf-image{
+        transform: none !important;
+        -webkit-transform: none !important;
+    }
+}
+
+@include ipad-portrait {
+
+    .carousel {
+
+        .carousel-control {
+            width: 10%;
+
+            &.edgtf-custom-nav {
+
+                .edgtf-prev-nav,
+                .edgtf-next-nav {
+
+                    .edgtf-slider-nav-label {
+                        font-size: 11px;
+                    }
+                }
+
+                .edgtf-prev-nav {
+                    left: 22px;
+                }
+
+                .edgtf-next-nav {
+                    right: 22px;
+                }
+            }
+
+            &.edgtf-default-nav {
+
+                .edgtf-prev-nav,
+                .edgtf-next-nav {
+                    height: 52px;
+                    line-height: 52px;
+                    font-size: 52px;
+                    white-space: nowrap;
+
+                    .edgtf-slider-nav-label {
+                        font-size: 11px;
+                    }
+                }
+
+                .edgtf-prev-nav {
+                    left: 0;
+                }
+
+                .edgtf-next-nav {
+                    right: 0;
+                }
+            }
+        }
+
+        .carousel-indicators {
+            bottom: 15px;
+            right: 22px;
+
+            &.edgtf-position-left {
+                left: 22px;
+            }
+        }
+    }
+}
+
+@include phone-landscape {
+
+    .carousel {
+
+        .carousel-indicators,
+        .carousel-control {
+            display: none !important;
+        }
+    }
+}

@@ -1,0 +1,294 @@
+/* ==========================================================================
+# Side area style - start
+========================================================================== */
+
+//TODO Delete commented code
+
+/* Side area general style - start
+========================================================================== */
+
+.edgtf-light-header .edgtf-page-header > div:not(.edgtf-sticky-header):not(.fixed) .edgtf-side-menu-button-opener,
+.edgtf-light-header .edgtf-top-bar .edgtf-side-menu-button-opener {
+
+    .edgtf-side-menu-title {
+        color: $header-light-color !important; //Color can be set inline from widget opener;
+    }
+
+    .edgtf-side-menu-lines .edgtf-side-menu-line {
+        background-color: $header-light-color !important; //Color can be set inline from widget opener;
+    }
+
+    &.opened,
+    &:hover {
+
+        .edgtf-side-menu-title {
+            color: $header-light-hover-color !important; //Color can be set inline from widget opener;
+        }
+
+        .edgtf-side-menu-lines .edgtf-side-menu-line {
+            background-color: $header-light-hover-color !important; //Color can be set inline from widget opener;
+        }
+    }
+}
+
+.edgtf-dark-header .edgtf-page-header > div:not(.edgtf-sticky-header):not(.fixed) .edgtf-side-menu-button-opener,
+.edgtf-dark-header .edgtf-top-bar .edgtf-side-menu-button-opener {
+
+    .edgtf-side-menu-title {
+        color: $header-dark-color !important; //Color can be set inline from widget opener;
+    }
+
+    .edgtf-side-menu-lines .edgtf-side-menu-line {
+        background-color: $header-dark-color !important; //Color can be set inline from widget opener;
+    }
+
+    &.opened,
+    &:hover {
+
+        .edgtf-side-menu-title {
+            color: $header-dark-hover-color !important; //Color can be set inline from widget opener;
+        }
+
+        .edgtf-side-menu-lines .edgtf-side-menu-line {
+            background-color: $header-dark-hover-color !important; //Color can be set inline from widget opener;
+        }
+    }
+}
+
+.edgtf-side-menu-button-opener {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+    .edgtf-side-menu-title {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 10px 0 0;
+        @include edgtfTransition(color .2s ease-out);
+    }
+
+    .edgtf-side-menu-lines {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: 31px;
+        height: 15px;
+        top: -1px;
+
+        .edgtf-side-menu-line {
+            position: absolute;
+            left: 0;
+            height: 1px;
+            width: 100%;
+            background-color: $default-heading-color;
+            @include edgtfTransition(background-color .2s ease-out, top .2s);
+
+            &.edgtf-line-1 {
+                top: 0;
+	            -webkit-transition: -webkit-transform .25s ease-out, top .15s ease-out .2s, background-color .2s ease-out;
+	            -moz-transition: -moz-transform .25s ease-out, top .15s ease-out .2s, background-color .2s ease-out;
+	            transition: transform .25s ease-out, top .15s ease-out .2s, background-color .2s ease-out;
+	            outline: transparent solid 1px;
+            }
+
+            &.edgtf-line-2 {
+                top: calc(50% - 1px);
+                top: -moz-calc(50%); //moz pixel move fix
+                outline:1px solid transparent; //moz pixelation fix
+	            transform-origin: 50% 50%;
+	            -webkit-transition: -webkit-transform .4s ease-in-out, background-color .2s ease-out;
+	            -moz-transition: -moz-transform .4s ease-in-out, background-color .2s ease-out;
+	            transition: transform .4s ease-in-out, background-color .2s ease-out;
+            }
+
+            &.edgtf-line-3 {
+                top: calc(100% - 1px);
+	            -webkit-transition: -webkit-transform .25s ease-out, top .15s ease-out .2s, background-color .2s ease-out;
+	            -moz-transition: -moz-transform .25s ease-out, top .15s ease-out .2s, background-color .2s ease-out;
+	            transition: transform .25s ease-out, top .15s ease-out .2s, background-color .2s ease-out;
+	            outline: transparent solid 1px;
+            }
+        }
+    }
+
+    &.opened,
+    &:hover {
+
+        .edgtf-side-menu-title {
+            color: $first-main-color !important; //Color can be set inline from widget opener;
+        }
+
+        .edgtf-side-menu-lines .edgtf-side-menu-line {
+
+            &.edgtf-line-1 {
+	            top: -6px;
+	            -webkit-transform: translateX(5px) translateY(8px) rotate(45deg) scale(.5,1);
+	            -moz-transform: translateX(5px) translateY(8px) rotate(45deg) scale(.5,1);
+	            transform: translateX(10px) translateY(8px) rotate(45deg) scale(.5,1);
+	            -webkit-transition: -webkit-transform .25s ease-out .2s, top .2s ease-out;
+	            -moz-transition: -moz-transform .25s ease-out .2s, top .2s ease-out;
+	            transition: transform .25s ease-out .2s, top .2s ease-out;
+            }
+
+	        &.edgtf-line-2 {
+		        @include edgtfTransform(rotate(360deg));
+		        -webkit-transition: -webkit-transform .4s ease-in-out;
+		        -moz-transition: -moz-transform .4s ease-in-out;
+		        transition: transform .4s ease-in-out;
+	        }
+
+            &.edgtf-line-3 {
+	            top: 6px;
+	            -webkit-transform: translateX(5px) translateY(-8px) rotate(-45deg) scale(.5,1);
+	            -moz-transform: translateX(5px) translateY(-8px) rotate(-45deg) scale(.5,1);
+	            transform: translateX(10px) translateY(6px) rotate(-45deg) scale(.5,1);
+	            -webkit-transition: -webkit-transform .3s ease-out .2s, top .2s ease-out;
+	            -moz-transition: -moz-transform .3s ease-out .2s, top .2s ease-out;
+	            transition: transform .3s ease-out .2s, top .2s ease-out;
+            }
+        }
+    }
+}
+
+.edgtf-side-menu {
+    position: fixed;
+    top: 0;
+    right: -428px;
+    width: 428px;
+    height: 100%;
+    min-height: 100%;
+    padding: 35px 60px 20px 60px;
+    background-color: #292929;
+    text-align: left;
+    overflow: hidden;
+    visibility: hidden;
+    z-index: 9999;
+    -webkit-backface-visibility: hidden;
+    @include edgtfBoxSizing(border-box);
+    @include edgtfTransition(all .6s cubic-bezier(.77,0,.175,1));
+
+    .edgtf-side-menu-title {
+        display: block;
+        margin: 0 0 12px;
+    }
+
+    .edgtf-close-side-menu-holder {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: table;
+        height: 80px;
+        text-align: right;
+        padding-right: 11%;
+        z-index: 1000;
+    }
+
+    .edgtf-close-side-menu-holder-inner {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    a.edgtf-close-side-menu {
+        display: block;
+        padding-left: 50px; //extend clickable area        
+        z-index: 1000;
+
+        .edgtf-side-menu-lines {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            width: 31px;
+            height: 15px;
+            left:40%;
+            -webkit-transition: -webkit-transform .6s cubic-bezier(.77,0,.175,1), left .6s cubic-bezier(.77,0,.175,1), background-color .2s ease-out;
+            transition: transform .3s cubic-bezier(.77,0,.175,1), left .0s .3s, background-color .0s .3s;
+
+            .edgtf-side-menu-line {
+                position: absolute;
+                left: 0;
+                height: 1px;
+                width: 100%;
+                background-color: #fff;
+                @include edgtfTransition(background-color .2s ease-out);
+
+                &.edgtf-line-1 {
+                    display: none;
+                }
+                &.edgtf-line-2 {
+                    top: 50%;
+                }
+                &.edgtf-line-3 {
+                    top: 50%;
+                    @include edgtfTransform(rotate(90deg));
+                }
+            }
+        }
+
+    }
+
+    a.edgtf-close-side-menu:hover {
+        span:before {
+            @include edgtfTransform(rotate(360deg));
+        }
+    }
+}
+
+.admin-bar .edgtf-side-menu .edgtf-close-side-menu-holder {
+    top: 32px;
+}
+
+/* Side area general style - end
+========================================================================== */
+
+/* Side area slides over content style - start
+========================================================================== */
+
+.edgtf-side-menu-slide-from-right {
+
+    .edgtf-wrapper {
+
+        .edgtf-cover {
+            z-index: -1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            opacity: 0;
+        }
+    }
+}
+
+.edgtf-side-menu-slide-from-right.edgtf-right-side-menu-opened {
+
+    .edgtf-wrapper {
+        .edgtf-cover {
+            z-index: 3000;
+        }
+    }
+
+    .edgtf-side-menu {
+        right: 0px;
+        visibility: visible;
+
+        .edgtf-close-side-menu-holder {
+            a.edgtf-close-side-menu {
+                .edgtf-side-menu-lines {
+                    left:0;
+                    @include edgtfTransform(rotate(45deg));
+                    -webkit-transition: -webkit-transform .6s cubic-bezier(.77,0,.175,1) .2s, left .6s cubic-bezier(.77,0,.175,1), background-color .2s ease-out;
+                    transition: transform .6s cubic-bezier(.77,0,.175,1) .2s, left .6s cubic-bezier(.77,0,.175,1), background-color .2s ease-out;
+                }
+            }
+        }
+    }
+}
+
+/* Side area slides over content style - end
+========================================================================== */
+
+/* ==========================================================================
+# Side area style - end
+========================================================================== */

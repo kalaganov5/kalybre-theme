@@ -1,0 +1,40 @@
+/* ==========================================================================
+# Image with text responsive styles - begin
+========================================================================== */
+@include laptop-landscape-large {
+
+    .edgtf-imwt-holder {
+        .edgtf-imwt-cell {
+            padding:0 7%;
+        }
+        .edgtf-imwt-text  {
+
+            .edgtf-imwt-title {
+                margin-bottom:10px;
+            }
+            .edgtf-btn {
+                margin: 15px 0 0;
+            }
+        }
+    }
+}
+
+@include laptop-landscape {
+    .edgtf-imwt-holder {
+        .edgtf-imwt-cell {
+            padding:0 15%;
+        }
+        .edgtf-imwt-text  {
+            .edgtf-imwt-title {
+                margin-bottom:25px;
+            }
+            .edgtf-btn {
+                margin: 35px 0 0;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+# Image with text responsive styles - end
+========================================================================== */

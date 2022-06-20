@@ -1,0 +1,122 @@
+/* ==========================================================================
+# Portfolio Single Gallery - begin
+========================================================================== */
+
+.gallery {
+    margin: 0 0 60px;
+
+    .edgtf-portfolio-gallery {
+        @include edgtfRelativeHolderLayout();
+        margin: 0 0 43px;
+    }
+
+    .edgtf-portfolio-single-navigation {
+        margin: 18px 0 0;
+    }
+
+    .edgtf-portfolio-info-holder {
+        margin: 0 0 0 26px;
+    }
+
+    .edgtf-portfolio-media {
+        margin: 0 -5px;
+
+        .edgtf-portfolio-single-media {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            float: left;
+            padding: 0 5px;
+            margin: 0 0 10px;
+            @include edgtfBoxSizing(border-box);
+        }
+
+        a {
+            position: relative;
+            overflow: hidden;
+            display: block;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(51, 51, 51, 0.8);
+                opacity: 0;
+                @include edgtfTransition(opacity .2s ease-out);
+            }
+
+            &:hover {
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+
+            img {
+                display: block;
+            }
+        }
+    }
+
+    $columns_size: ('two', 'three', 'four');
+
+    @for $i from 0 to length($columns_size) { 
+        &.edgtf-portfolio-gallery-#{nth($columns_size,$i+1)}-columns {
+            $column_width: 100%/($i+2);
+
+            .edgtf-portfolio-single-media {
+                width: $column_width;
+
+                @media only screen and (min-width: $ipad-portrait-plus-pixel) {
+
+                    &:nth-child(#{$i+2}n+1) {
+                        clear: both;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: $ipad-portrait) {
+
+        @for $i from 0 to length($columns_size) { 
+            &.edgtf-portfolio-gallery-#{nth($columns_size,$i+1)}-columns {
+                $column_width: 100%/2;
+
+                .edgtf-portfolio-single-media {
+                    width: $column_width;
+
+                    &:nth-child(2n+1) {
+                        clear: both;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: $phone-landscape) {
+
+        @for $i from 0 to length($columns_size) { 
+            &.edgtf-portfolio-gallery-#{nth($columns_size,$i+1)}-columns {
+                $column_width: 100%;
+
+                .edgtf-portfolio-single-media {
+                    width: $column_width;
+                }
+            }
+        }
+    }
+}
+
+@include ipad-landscape {
+
+    .gallery .edgtf-portfolio-info-holder {
+        margin: 0;
+    }
+}
+/* ==========================================================================
+# Portfolio Single Gallery - end
+========================================================================== */

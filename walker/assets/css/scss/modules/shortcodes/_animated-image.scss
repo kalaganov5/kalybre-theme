@@ -1,0 +1,36 @@
+/* ==========================================================================
+# Animated Image style - begin
+========================================================================== */
+
+.edgtf-animated-image-holder {
+    @include edgtfRelativeHolderLayout();
+
+    .edgtf-animated-image {
+        @include edgtfRelativeHolderLayout();
+
+        img {
+            display: block;
+            @include edgtfTransition(all .3s ease);
+        }
+
+        a {
+            display: block;
+
+            &:hover {
+
+                img {
+                    @include edgtfBoxShadow(0 8px 8px rgba(0,0,0,.15));
+                    @include edgtfTransform(translateY(-15px));
+                }
+            }
+        }
+    }
+
+    .edgtf-animated-image-title {
+        margin: 32px 0;
+        text-align: center;
+    }
+}
+/* ==========================================================================
+# Animated Image style - end
+========================================================================== */

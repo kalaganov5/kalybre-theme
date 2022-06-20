@@ -1,0 +1,72 @@
+/* ==========================================================================
+   Progress bar shortcode start styles
+   ========================================================================== */
+.edgtf-progress-bar {
+    @include edgtfRelativeHolderLayout();
+
+    .edgtf-progress-title-holder {
+        position: relative;
+        margin: 17px 0 11px;
+
+        .edgtf-progress-title {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            z-index: 100;
+        }
+    }
+
+    .edgtf-progress-number-wrapper {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+        text-align: right;
+        opacity: 0;
+        z-index: 10;
+
+        .edgtf-progress-number {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            float: right;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+            letter-spacing: 0px;
+            padding: 0 4px;
+            color: $default-text-color;
+
+            .edgtf-percent {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 1;
+                margin: 1px 0;
+
+                &:after {
+                    content: '%';
+                }
+            }
+        }
+    }
+
+    .edgtf-progress-content-outer {
+        position: relative;
+        height: 7px;
+        overflow: hidden;
+        background-color: #f4f4f4;
+        @include edgtfBorderRadius(5px);
+
+        .edgtf-progress-content {
+            height: 7px;
+            max-width: 100%;
+            overflow: hidden;
+            background-color: $default-heading-color;
+        }
+    }
+}
+/* ==========================================================================
+   Progress bar shortcode end styles
+   ========================================================================== */

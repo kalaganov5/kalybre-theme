@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Frame Slider Styles Responsive - Start
+   ========================================================================== */
+@include laptop-landscape {
+	.edgtf-frame-slider { 
+		.owl-carousel {
+		    .owl-controls {
+		    	position: relative;
+	    	    right: auto;
+	    	    left: auto;
+	    	    text-align: center;
+	    	    margin: 60px auto;
+	    	    width: auto;
+		    }
+		}
+	}
+
+}
+
+@include ipad-portrait {
+	.edgtf-frame-slider {
+		padding-left: 40px;
+		padding-right: 40px;
+		.edgtf-frame-slider-left-panel,
+		.edgtf-frame-slider-right-panel {
+			max-width: 100%;
+		}
+		.edgtf-frame-slider-left-panel {
+			.owl-controls {
+				display: none;
+			}
+		}
+		.edgtf-frame-slider-right-panel {
+			.owl-item {
+				transition: visibility .75s;
+				&:not(.active) {
+					visibility: hidden;
+				}
+			}
+			.owl-controls {
+				display: block;
+				text-align: center;
+				margin: 20px auto 0;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Frame Slider Styles Responsive - End
+   ========================================================================== */

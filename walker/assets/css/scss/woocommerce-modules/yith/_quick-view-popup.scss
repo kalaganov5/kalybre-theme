@@ -1,0 +1,268 @@
+/* ==========================================================================
+   YITH Quick View styles - begin
+   ========================================================================== */
+#yith-quick-view-modal,
+.yith-quick-view.yith-modal {
+
+    .yith-quick-view-overlay {
+        background-color: rgba($default-heading-color, .6);
+    }
+
+    .yith-wcqv-wrapper {
+        padding: 0;
+        max-width: 920px;
+        height: auto !important;
+    }
+
+    .yith-wcqv-main {
+        @include edgtfRelativeHolderLayout();
+        padding: 0;
+        overflow-x: hidden;
+        @include edgtfBoxShadow(none);
+    }
+
+    #yith-quick-view-content {
+
+        .images,
+        .summary {
+            position: relative;
+            float: left;
+            width: 50%;
+            @include edgtfBoxSizing(border-box);
+        }
+
+        .images {
+            
+            figure {
+                margin: 0;
+            }
+
+            a, img {
+                display: block;
+            }
+        }
+
+        .summary {
+            padding: 46px 54px 54px 54px;
+
+            .product_title,
+            .edgtf-yith-product-title {
+                margin: 0 0 16px;
+            }
+
+            .price {
+                line-height: 1;
+                margin: 15px 0 0;
+                font-weight: 400;
+                color: $default-heading-color;
+
+                * {
+                    font-size: inherit;
+                    line-height: inherit;
+                }
+
+                del {
+                    color: $default-heading-color;
+                    margin: 0 8px 0 0;
+                }
+
+                ins {
+                    text-decoration: none;
+                }
+            }
+
+            .woocommerce-product-rating {
+                @include edgtfRelativeHolderLayout();
+                line-height: 1;
+                margin: 16px 0 3px;
+            }
+
+            div[itemprop="description"] {
+                @include edgtfRelativeHolderLayout();
+                margin: 22px 0 3px;
+
+                p {
+                    margin: 0;
+                }
+            }
+
+            .product_meta {
+                margin: 16px 0 0;
+
+                > span {
+                    display: block;
+                    margin: 3px 0;
+
+                    a {
+                        color: $default-text-color;
+
+                        &:hover {
+                            color: $first-main-color;
+                        }
+                    }
+                }
+            }
+
+            .edgtf-woo-social-share-holder {
+                @include edgtfRelativeHolderLayout();
+                margin: 0;
+
+                > * {
+                    display: table-cell;
+                    vertical-align: top;
+                }
+
+                > span {
+                    padding: 0 9px 0 0;
+                }
+            }
+
+            .yith-wcwl-add-to-wishlist {
+                width: 100%;
+            }
+
+            p.stock.out-of-stock,
+            p.stock.in-stock {
+                color: $default-heading-color;
+                font-weight: 700;
+                margin: 18px 0 0;
+            }
+
+            form.cart {
+                @include edgtfRelativeHolderLayout();
+                margin: 36px 0 0;
+            }
+
+            .edgtf-quantity-buttons {
+                margin: 0 20px 0 0;
+            }
+
+            .variations {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0;
+                border: none;
+                padding: 0;
+
+                tr {
+                    border: none;
+                }
+
+                td {
+                    padding: 0;
+                }
+
+                .value select {
+                    position: relative;
+                    width: 200px;
+                    margin: 0 10px;
+                    outline: none;
+                    background-color: transparent;
+                    background-image: none;
+                    border: 1px solid $default-border-color;
+                    border-radius: 0;
+                    color: $default-text-color;
+                    font-family: inherit;
+                    font-size: 13px;
+                    font-weight: 300;
+                    height: 44px;
+                    line-height: 44px;
+                    padding: 0 20px;
+                    @include edgtfBoxSizing(border-box);
+                }
+            }
+
+            .single_variation_wrap {
+                @include edgtfRelativeHolderLayout();
+                margin: 15px 0 0;
+
+                .woocommerce-variation-add-to-cart {
+                    margin: 15px 0 0;
+                }
+            }
+
+            table.group_table {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0;
+                border: none;
+                padding: 0;
+
+                tbody {
+                    display: block;
+                }
+
+                tr {
+                    display: block;
+                    padding: 0 0 10px;
+                    border: 0;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+
+                td {
+                    padding: 0 17px 10px 0;
+                    text-align: left;
+
+                    &.price {
+                        display: table-cell;
+                        vertical-align: middle;
+                    }
+
+                    &:last-child {
+                        padding: 0 0 10px;
+                    }
+                }
+
+                .edgtf-quantity-buttons {
+                    margin: 0;
+                }
+
+                a {
+                    color: $default-text-color;
+
+                    &:hover {
+                        color: $default-heading-color;
+                    }
+                }
+            }
+        }
+    }
+
+    #yith-quick-view-close {
+        top: 38px;
+        right: 38px;
+        width: 15px;
+        height: 15px;
+        color: $default-heading-color;
+        font-size: 0;
+        line-height: 15px;
+        font-weight: 400;
+        text-align: center;
+        opacity: 1;
+        border: 0;
+
+        &:before {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            font-family: 'Ionicons';
+            content: "\f404";
+            font-size: 30px;
+            line-height: inherit;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        &:hover {
+            color: $default-heading-color;
+        }
+    }
+}
+/* ==========================================================================
+   YITH Quick View  styles - end
+   ========================================================================== */

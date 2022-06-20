@@ -1,0 +1,100 @@
+/* ==========================================================================
+# Team Carousels style - begin
+========================================================================== */
+
+.edgtf-team-carousel-holder {
+    @include edgtfRelativeHolderLayout();
+
+    .edgtf-team-carousel-inner {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .owl-controls {
+
+        .owl-prev,
+        .owl-next {
+            position: absolute;
+            top: 50%;
+            z-index: 3;
+            @include edgtfTransform(translateY(-50%));
+
+            &:hover {
+
+                .edgtf-prev-icon,
+                .edgtf-next-icon {
+                    color: $first-main-color;
+                }
+            }
+        }
+
+        .owl-prev {
+            left: -65px;
+        }
+
+        .owl-next {
+            right: -65px;
+        }
+
+        .edgtf-prev-icon,
+        .edgtf-next-icon {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            color: $default-heading-color;
+            line-height: 1;
+            @include edgtfTransition(color .2s ease-out);
+
+            .edgtf-icon-arrow {
+              position: relative;
+              display: inline-block;
+              vertical-align: middle;
+              line-height: inherit;
+            }
+
+            .edgtf-icon-arrow {
+                font-size: 60px;
+
+                &:before {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .owl-dots {
+        text-align: center;
+        margin: 16px 0 0;
+
+        .owl-dot {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .owl-dot span {
+            display: inline-block;
+            vertical-align: middle;
+            width: 12px;
+            height: 12px;
+            margin: 0 6px;
+            border-radius: 3em;
+            background-color: #babbbd;
+        }
+
+        .owl-dot.active span {
+            background-color: $default-heading-color;
+        }
+    }
+
+    .owl-carousel .owl-item img {
+        -webkit-transform: translateZ(0); //chrome text cut off fix
+    }
+
+    .edgtf-team-image,
+    .edgtf-team-info {
+        -webkit-transform: translateZ(0); //chrome text cut off fix
+    }
+}
+/* ==========================================================================
+# Team Carousels style - end
+========================================================================== */

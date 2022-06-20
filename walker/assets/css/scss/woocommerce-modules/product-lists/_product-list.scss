@@ -1,0 +1,553 @@
+/* Woocommerce Product List Shortcode - begin
+========================================================================== */
+
+.edgtf-pl-holder {
+    @include edgtfRelativeHolderLayout();
+
+    .edgtf-pli {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        padding: 0;
+        z-index: 100;
+        @include edgtfBoxSizing(border-box);
+
+        .edgtf-pli-title {
+            text-transform: uppercase;
+        }
+
+        .edgtf-pli-excerpt {
+            color: $default-heading-color;
+            font-size: 18px;
+            margin: 0 0 1.277777777777778em;
+        }
+
+        .edgtf-pli-price {
+            font-size: 16px;
+            line-height: 1;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin: 14px 0 7px;
+            color: $default-heading-color;
+
+            * {
+                font-size: inherit;
+                line-height: inherit;
+            }
+
+            del {
+                color: $default-text-color;
+            }
+
+            ins {                
+                text-decoration: none;
+            }
+        }
+
+        .edgtf-pli-rating-holder {
+            @include edgtfRelativeHolderLayout();
+            line-height: 1;
+            margin: 10px 0 20px;
+        }
+
+        .edgtf-pli-rating {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            font-family: "ElegantIcons";
+            font-size: 12px;
+            line-height: 1;
+            letter-spacing: 3px;
+            color: $default-heading-color;                
+            overflow: hidden;
+            -webkit-font-smoothing: antialiased;
+
+            &:before {
+                content: "\e031\e031\e031\e031\e031";
+            }
+
+            span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                overflow: hidden;
+
+                &:before {
+                    content: "\e033\e033\e033\e033\e033";
+                }
+            }
+        }
+    }
+
+    .edgtf-pli-inner {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        overflow: hidden;
+
+        &:hover {
+
+            .edgtf-pli-text {
+                opacity: 1;
+            }
+
+            .edgtf-pl-yith {
+                bottom: 0;
+            }
+        }
+
+        .touch & {
+            cursor: pointer;
+        }
+
+        .edgtf-pli-image {
+            @include edgtfRelativeHolderLayout();
+
+            img {
+                display: block;
+                width: 100%;
+            }
+
+            .edgtf-pli-onsale,
+            .edgtf-pli-out-of-stock,
+            .edgtf-pli-new-product {
+                position: absolute;
+                display: block;
+                top: 0;        
+                width: auto;
+                height: 29px;
+                color: #fff;
+                font-size: 10px;
+                line-height: 29px;
+                font-weight: 500;
+                letter-spacing: 2px;
+                padding: 0 20px;
+                margin: 0;
+                background-color: $default-heading-color;
+                text-align: center;
+                z-index: 2;
+                @include edgtfTransform(translateZ(0));
+                @include edgtfBoxSizing(border-box);
+            }
+
+            .edgtf-pli-onsale {
+                left: 0;
+            }
+
+            .edgtf-pli-out-of-stock,
+            .edgtf-pli-new-product {
+                right: 0;
+            }
+        }
+            
+        .edgtf-pli-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            padding: 10px 15px;
+            opacity: 0;
+            background-color: rgba(51, 51, 51, 0.6);
+            @include edgtfBoxSizing(border-box);
+            @include edgtfTransition(opacity .2s ease-out, background-color .2s ease-out);
+        }
+
+        .edgtf-pli-text-outer {
+            position: relative;
+            display: table;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+        .edgtf-pli-text-inner {
+            position: relative;
+            display: table-cell;
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+
+            .edgtf-pli-title {
+                margin: 0 0 10px;
+                color: #fff;
+            }
+
+            .edgtf-pli-excerpt {
+                color: #fff;
+            }
+
+            .edgtf-pli-price {
+                color: #fff;
+
+                del {
+                    color: #fff;
+                }
+            }
+
+            .edgtf-pli-rating {
+                color: #ccc;
+            }
+
+            .button,
+            .added_to_cart {
+                position: relative;
+                display: inline-block;
+                width: auto;
+                height: 54px;
+                line-height: 54px;
+                padding: 0 46px;
+                margin: 22px 0 0;
+                font-size: 11px;
+                font-weight: 500;
+                letter-spacing: 2px;
+                color: transparent;
+                background-color: #fff;          
+                border: 0;
+                outline: none;
+                white-space: nowrap;
+                cursor: pointer;
+                vertical-align: middle;
+                text-transform: uppercase;
+                z-index: 3;
+                overflow: hidden;
+                @include edgtfBoxSizing(border-box);
+                @include edgtfTransition(color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out);
+
+                &.edgtf-button-simple {
+                    margin: 0;
+                }
+
+                &:before,
+                &:after {
+                    content: attr(data-title);
+                    position: absolute;
+                    top: 1px;
+                    left: 0;
+                    display: block;
+                    width: 100%;
+                    height: 100%;                
+                    text-align: center;
+                    -webkit-transition: color .2s ease-in-out, -webkit-transform .2s ease-in-out;
+                    -moz-transition: color .2s ease-in-out, -moz-transform .2s ease-in-out;
+                    transition: color .2s ease-in-out, transform .2s ease-in-out;            
+                    -webkit-filter: blur(0);
+                }
+
+                &:before {
+                    color: $default-heading-color;
+                    @include edgtfTransform(translateY(0%));
+                }
+
+                &:after {
+                    color: transparent;
+                    @include edgtfTransform(translateY(40%));
+                }
+
+                &:hover {
+                    color: transparent;
+                    background-color: #fff;
+                    
+                    &:before {
+                        color: transparent;
+                        @include edgtfTransform(translateY(-40%));
+                    }
+
+                    &:after {
+                        color: $default-heading-color;
+                        @include edgtfTransform(translateY(0%));
+                    }
+                }
+            }
+
+            .added_to_cart {
+
+                &:before,
+                &:after {
+                    content: attr(title);
+                }
+            }
+
+            .button.added {
+                display: none;
+            }
+        }
+
+        .edgtf-pli-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .button.yith-wcqv-button {
+            display: none !important;
+        }
+
+        .edgtf-pl-yith {
+            position: absolute;
+            bottom: -101%;
+            left: 0;
+            display: inline-block;
+            vertical-align: middle;
+            height: 40px;
+            line-height: 24px;
+            padding: 8px 0;
+            width: 100%;
+            z-index: 4;            
+            background-color: $default-heading-color;
+            @include edgtfTransition(bottom .35s ease-in-out);
+            @include edgtfBoxSizing(border-box);
+
+            &.edgtf-pl-yith-items {
+
+                .edgtf-pl-yith-inner {
+
+                    > *:first-child {
+                        border-right: 1px solid $default-text-color;
+                    }
+                }
+            }
+
+            .edgtf-pl-yith-inner {
+                position: relative;
+                display: table;
+                width: 100%;
+                vertical-align: top;
+                text-align: center;
+                
+                > .clear {
+                    display: none;
+                }
+
+                > * {
+                    display: table-cell;
+                    vertical-align: middle;
+                    width: 50%;
+                    margin: 0;
+                    @include edgtfBoxSizing(border-box);
+
+                    * {
+                        max-height: 24px;
+                    }
+                }
+            }
+
+            .yith-wcwl-add-button {
+
+                a {
+                    width: 100%;
+                    color: #fff;
+                    font-size: 0px;
+                    line-height: inherit;
+                }
+            }
+
+            .yith-wcwl-wishlistaddedbrowse,
+            .yith-wcwl-wishlistexistsbrowse {
+
+                span {
+                    display: none;
+                }
+
+                a {
+                    color: #fff;
+                    font-size: 0px;
+                    line-height: inherit;
+                }
+            }
+
+            .yith-wcqv-button {
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                width: 100%;
+                color: #fff;
+
+                .blockUI {
+                    display: none !important;
+                }
+
+                .edgtf-yith-wcqv-icon {
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: top;
+                    color: inherit;
+                    font-size: 30px;
+                    line-height: inherit;
+                    opacity: 1;
+                    @include edgtfTransition(opacity .3s ease-out);
+
+                    &:before {
+                        display: block;
+                        line-height: inherit;
+                    }
+                }
+
+                .edgtf-yith-wcqv-label {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    display: inline-block;
+                    vertical-align: top;
+                    color: inherit;
+                    font-size: 11px;
+                    line-height: inherit;
+                    letter-spacing: 2px;
+                    font-weight: 500;
+                    white-space: nowrap;
+                    opacity: 0;
+                    -webkit-filter: blur(0);
+                    @include edgtfTransform(translateX(-50%));
+                    @include edgtfTransition(opacity .3s ease-out);
+                }
+
+                &:hover {
+
+                    .edgtf-yith-wcqv-icon {
+                        opacity: 0;
+                    }
+
+                    .edgtf-yith-wcqv-label {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .edgtf-pli-text-wrapper {
+        @include edgtfRelativeHolderLayout();
+        margin: 0 0 31px;
+        text-align: center;
+
+        .edgtf-pli-title {
+            margin: 26px 0 10px;
+        }
+
+        .edgtf-pli-rating-holder {
+            margin-bottom: 7px;
+        }
+    }
+
+    &.edgtf-normal-space {
+
+        .edgtf-pl-outer {
+            margin: 0 -15px;
+
+            .edgtf-pli {
+                padding: 0 15px;
+                margin: 0 0 30px;
+            }
+        }
+    }
+
+    &.edgtf-small-space {
+
+        .edgtf-pl-outer {
+            margin: 0 -5px;
+
+            .edgtf-pli {
+                padding: 0 5px;
+                margin: 0 0 10px;
+            }
+        }
+    }
+}
+
+.touch .edgtf-pl-holder .edgtf-pli-inner {
+    cursor: pointer;
+}
+
+/*************** Standard Layout ***************/
+
+.edgtf-pl-holder.edgtf-standard-layout {
+
+    .edgtf-pli {
+        float: left;
+    }
+
+    &.edgtf-normal-space {
+        margin: 0 0 -30px;
+    }
+
+    &.edgtf-small-space {
+        margin: 0 0 -10px;
+    }
+
+    $standard_list_columns: ('two', 'three', 'four', 'five', 'six');
+    $standard_list_size: ('small', 'normal');
+
+    @for $i from 0 to length($standard_list_columns) { 
+        &.edgtf-#{nth($standard_list_columns,$i+1)}-columns {
+            @for $j from 0 to length($standard_list_size) {
+                &.edgtf-#{nth($standard_list_size,$j+1)}-space {
+                    $column_width: 100%/($i+2);
+
+                    .edgtf-pli {
+                        width: $column_width;
+
+                        @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+                            &:nth-child(#{$i+2}n+1) {
+                                clear: both;
+                            }
+                        }
+                    }  
+                }
+            }
+        }
+    }
+}
+
+/*************** Masonry Layout ***************/
+
+.edgtf-pl-holder.edgtf-masonry-layout {
+
+    .edgtf-pl-outer {
+        opacity: 0;
+    }
+
+    .edgtf-pl-sizer {
+        width: 100%;
+    }
+
+    .edgtf-pl-gutter {
+        width: 0%;
+    }
+
+    .edgtf-pli-inner {
+        width: 100%;   
+    }
+}
+
+.edgtf-pl-holder.edgtf-masonry-layout {
+
+    $masonry_list_columns: ('two', 'three', 'four', 'five', 'six');
+    $masonry_list_size: ('small', 'normal');
+
+    @for $i from 0 to length($masonry_list_columns) { 
+        &.edgtf-#{nth($masonry_list_columns,$i+1)}-columns {
+            @for $j from 0 to length($masonry_list_size) {
+                &.edgtf-#{nth($masonry_list_size,$j+1)}-space {
+                    $column_width: 100%/($i+2);
+
+                    .edgtf-pli,
+                    .edgtf-pl-sizer {
+                        width: $column_width;
+                    }
+
+                    .edgtf-pli.edgtf-woo-image-large-width {
+                        width: $column_width*2;
+                    }   
+                }
+            }
+        }
+    }    
+}
+/* Woocommerce Product List Shortcode - end
+========================================================================== */

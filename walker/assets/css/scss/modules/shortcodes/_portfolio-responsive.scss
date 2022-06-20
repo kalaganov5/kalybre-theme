@@ -1,0 +1,214 @@
+@media only screen and (max-width: $laptop-landscape-large) {
+
+    .edgtf-header-vertical {
+
+        .edgtf-portfolio-list-holder-outer {
+
+            &.edgtf-ptf-standard,
+            &.edgtf-ptf-gallery {
+
+                $portfolio_columns: ('four', 'five', 'six');
+
+                @for $i from 0 to length($portfolio_columns) {
+                    &.edgtf-ptf-#{nth($portfolio_columns,$i+1)}-columns {
+                        $column_width: 100%/3;
+
+                        article,
+                        .edgtf-gap {
+                            width: $column_width;
+                        }
+
+                        @media only screen and (min-width: $laptop-landscape-plus-pixel) {
+
+                            article {
+
+                                &:nth-child(#{$i+4}n+1) {
+                                    clear: none;
+                                }
+                                
+                                &:nth-child(3n+1) {
+                                    clear: both;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.edgtf-ptf-pinterest {
+
+                $portfolio_columns: ('four', 'five', 'six');
+
+                @for $i from 0 to length($portfolio_columns) {
+                    &.edgtf-ptf-#{nth($portfolio_columns,$i+1)}-columns {
+                        $column_width: 100%/3;
+
+                        article,
+                        .edgtf-portfolio-list-pinterest-grid-sizer {
+                            width: $column_width;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $laptop-landscape) {
+
+    .edgtf-header-vertical {
+
+        .edgtf-portfolio-list-holder-outer {
+
+            &.edgtf-ptf-standard,
+            &.edgtf-ptf-gallery {
+
+                $portfolio_columns: ('three', 'four', 'five', 'six');
+
+                @for $i from 0 to length($portfolio_columns) {
+                    &.edgtf-ptf-#{nth($portfolio_columns,$i+1)}-columns {
+                        $column_width: 100%/2;
+
+                        article,
+                        .edgtf-gap {
+                            width: $column_width;
+                        }
+
+                        @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+                            article {
+
+                                &:nth-child(#{$i+3}n+1) {
+                                    clear: none;
+                                }
+                                
+                                &:nth-child(2n+1) {
+                                    clear: both;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.edgtf-ptf-pinterest {
+
+                $portfolio_columns: ('three', 'four', 'five', 'six');
+
+                @for $i from 0 to length($portfolio_columns) {
+                    &.edgtf-ptf-#{nth($portfolio_columns,$i+1)}-columns {
+                        $column_width: 100%/2;
+
+                        article,
+                        .edgtf-portfolio-list-pinterest-grid-sizer {
+                            width: $column_width;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+        .edgtf-portfolio-list-holder-outer {
+
+            &.edgtf-ptf-gallery {
+
+                .edgtf-item-text-overlay {
+
+                    .edgtf-item-text-overlay-inner {
+
+                        .edgtf-item-text-holder {
+                            width: calc(100% - 15px);
+                            padding-left: 15px;
+                            padding-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .edgtf-portfolio-filter-holder {
+        margin: 0 0 34px;
+    }
+}
+
+@media only screen and (max-width: $ipad-landscape) {
+
+    .edgtf-portfolio-list-holder-outer {
+
+        &.edgtf-ptf-standard,
+        &.edgtf-ptf-gallery {
+
+            $portfolio_columns: ('three', 'four', 'five', 'six');
+
+            @for $i from 0 to length($portfolio_columns) {
+                &.edgtf-ptf-#{nth($portfolio_columns,$i+1)}-columns {
+                    $column_width: 100%/2;
+
+                    article,
+                    .edgtf-gap {
+                        width: $column_width;
+                    }
+
+                    @media only screen and (min-width: $phone-landscape-plus-pixel) {
+
+                        article {
+                            
+                            &:nth-child(2n+1) {
+                                clear: both;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.edgtf-ptf-pinterest {
+
+            $portfolio_columns: ('three', 'four', 'five', 'six');
+
+            @for $i from 0 to length($portfolio_columns) {
+                &.edgtf-ptf-#{nth($portfolio_columns,$i+1)}-columns {
+                    $column_width: 100%/2;
+
+                    article,
+                    .edgtf-portfolio-list-pinterest-grid-sizer {
+                        width: $column_width;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $ipad-portrait) {
+
+    .edgtf-portfolio-filter-holder {
+
+        ul {
+            padding: 0;
+
+            li {
+                margin: 0 0 0 1px;
+
+                span {
+                    padding: 0 8px;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $phone-landscape) {
+
+    .edgtf-portfolio-list-holder-outer {
+
+        article {
+            width: 100% !important; // !important is set to override all other stronger selectors
+        }
+    }
+}

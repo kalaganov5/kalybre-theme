@@ -1,0 +1,30 @@
+/* ==========================================================================
+# Call to action style - begin
+========================================================================== */
+
+.edgtf-call-to-action {
+    position: relative;
+    display: block;
+    text-align: center;
+    @include edgtfBoxSizing(border-box);
+
+    .edgtf-text-wrapper .edgtf-call-to-action-text {
+        padding: 0;
+        margin: 0 0 33px 0;
+        @media only screen and (min-width: $ipad-portrait-plus-pixel) {
+            > h1, h2, h3, h4, h5, h6 {
+                line-height: inherit;
+            }
+            > * {
+                line-height: 2;
+            }
+        }
+    }
+
+    .edgtf-call-to-action-buttons a {
+        margin: 12px;
+    }
+}
+/* ==========================================================================
+# Call to action style - end
+========================================================================== */

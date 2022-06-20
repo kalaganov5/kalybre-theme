@@ -1,0 +1,36 @@
+/* ==========================================================================
+#Sticky Nav header styles - start
+========================================================================== */
+.edgtf-sticky-header {
+
+    body[class*='edgtf-sticky'] & .edgtf-search-opener .edgtf-search-opener-wrapper {
+        top: 0;
+        @include edgtfTransform(none);
+    }
+
+    .edgtf-vertical-align-containers {
+
+        .edgtf-position-center {
+
+            .edgtf-position-center-inner {
+                height: 100%;
+            }
+        }
+    }
+
+    .edgtf-main-menu {
+
+        > ul {
+
+            > li {
+
+                > a {
+                    padding: 0 28px;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+#Sticky Nav header styles - end
+========================================================================== */

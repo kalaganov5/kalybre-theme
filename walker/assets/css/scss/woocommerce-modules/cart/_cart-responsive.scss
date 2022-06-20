@@ -1,0 +1,278 @@
+/* ==========================================================================
+   WooCommerce Cart Page Responsive styles - begin
+   ========================================================================== */
+
+@media only screen and (max-width: $ipad-landscape) {
+
+    .edgtf-woocommerce-page {
+
+        table.cart {
+
+            thead {
+
+                tr {
+
+                    th {
+                        padding: 18px 10px;
+
+                        &.product-remove {
+                            padding: 18px 10px 18px 30px;
+                        }
+                    }
+                }
+            }
+
+            tr.cart_item {
+
+                td {
+                    padding: 20px 10px;
+
+                    &.product-remove {
+                        padding: 20px 10px 20px 30px;
+                    }
+
+                    &.product-name {
+
+                        a {
+
+                            img {
+                                max-width: 84px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $ipad-portrait) {
+
+    .edgtf-woocommerce-page {
+
+        table.cart {
+
+            thead {
+
+                tr {
+
+                    th {
+                        padding: 16px 8px;
+
+                        &.product-remove {
+                            padding: 16px 8px 16px 20px;
+                        }
+                    }
+                }
+            }
+
+            tr.cart_item {
+
+                td {
+                    padding: 18px 8px;
+
+                    &.product-remove {
+                        padding: 18px 8px 18px 20px;
+                    }
+
+                    &.product-name {
+
+                        a {
+
+                            img {
+                                margin: 0 16px 0 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            td.actions {
+
+                .coupon {
+
+                    input[type="text"] {
+                        width: 180px;
+                        margin: 0 17px 0 0;
+                        padding: 9px 20px;
+                    }
+                }
+
+                .button {
+                    height: 38px;
+                    line-height: 38px;
+                    padding: 0 28px;
+                }
+            }
+        }
+
+        .cart-collaterals {
+
+            table {
+
+                td, th {
+                    padding: 14px 20px;
+                }
+            }
+        }
+
+        .cross-sells {
+
+            .edgtf-cross-sells-title {
+
+                .edgtf-cross-sells-text {
+                    padding: 0 30px;
+                }
+            }
+        }
+
+        .cart_totals {
+
+            .edgtf-cart-totals-title {
+
+                .edgtf-cart-totals-text {
+                    padding: 0 30px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $phone-landscape) {
+
+    .edgtf-woocommerce-page {
+
+        table.cart {
+
+            thead {
+
+                tr {
+
+                    th {
+                        font-size: 11px;
+                        letter-spacing: 1px;
+                        padding: 16px 4px;
+
+                        &.product-remove {
+                            padding: 16px 4px;
+                        }
+                    }
+                }
+            }
+
+            tr.cart_item {
+
+                td {
+                    font-size: 12px;
+                    padding: 16px 6px;
+
+                    &.product-remove {
+                        padding: 16px 4px;
+                        text-align: center;
+                    }
+
+                    &.product-name {
+
+                        a {
+
+                            img {
+                                display: block;
+                                margin: 0;
+                            }
+                        }
+
+                        .edgtf-product-name {
+                            display: block;
+                            margin: 10px 0 0;
+                        }
+                    }
+                }
+            }
+
+            td.actions {
+
+                .coupon {
+
+                    input[type="text"] {
+                        width: 160px;
+                        padding: 9px 15px;
+                        margin: 0 10px 0 0;
+                    }
+                }
+
+                .coupon,
+                > input {
+                    float: none;
+                    display: block;
+                }
+
+                > input {
+                    margin: 14px 0 0;
+                }
+            }
+        }
+
+        .cart-collaterals {
+
+            table {
+
+                td, th {
+                    padding: 12px 18px;
+                }
+
+                th {
+                    width: auto;
+                }
+            }
+        }
+
+        .cross-sells {
+
+            .edgtf-cross-sells-title {
+
+                .edgtf-cross-sells-text {
+                    padding: 0 20px;
+                }
+            }
+        }
+
+        .cart_totals {
+
+            .edgtf-cart-totals-title {
+
+                .edgtf-cart-totals-text {
+                    padding: 0 20px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $phone-portrait) {
+
+    .edgtf-woocommerce-page {
+
+        .cross-sells {
+
+            .edgtf-cross-sells-title {
+
+                .edgtf-cross-sells-text {
+                    padding: 0 12px;
+                }
+            }
+        }
+
+        .cart_totals {
+
+            .edgtf-cart-totals-title {
+
+                .edgtf-cart-totals-text {
+                    padding: 0 12px;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Cart Page Responsive styles - end
+   ========================================================================== */

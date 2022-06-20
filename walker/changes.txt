@@ -1,0 +1,106 @@
+2.1
+- Added WooCommerce 3.6.5 compatibility
+- Updated WPBakery Page Builder to 6.0.3
+- Updated Revolution Slider to 6.0.3
+
+2.0
+- Added WordPress 5.2 compatibility
+- Added WooCommerce 3.6.2 compatibility
+- Updated Walker Child theme to 1.1
+- Updated Edge Core plugin to 1.3
+- Updated Edge Instagram Feed plugin to 1.0.1
+- Updated Edge Twitter Feed plugin to 1.0.1
+- Updated Edge Membership plugin to 1.2.1
+- Updated Revolution Slider to 5.4.8.3
+- Updated WPBakery Page Builder to 6.0.2
+- Updated walker.pot and edgtf-core.pot languages files
+- Improved theme templates, modules and functions
+- Fixed bugs
+
+1.10
+- Added WooCommerce 3.5.3 compatibility
+- Updated Visual Composer to 5.6
+- Updated Revolution Slider to 5.4.8.1
+- Updated Envato Market plugin to 2.0.1
+
+1.9
+- Added WooCommerce 3.4.2 compatibility
+- Added compatibility with PHP 7.2
+- Updated Visual Composer to 5.4.7
+- Updated Revolution Slider to 5.4.7.4
+- Updated Envato Market plugin to 2.0.0
+
+1.8
+- Added WooCommerce 3.2.6 compatibility
+- Added Envato Market plugin as required
+- Added recommended plugins (WooCommerce and Contact Form 7)
+- Updated Visual Composer to 5.4.5
+- Updated Revolution Slider to 5.4.5.6
+- Updated Edge CPT to 1.2.2 version
+- Fixed header misalignment on latest chrome version
+- Improved menu import functionality
+
+1.7
+- Added Woocommerce 3.1.2 compatibility
+- Updated Visual Composer to 5.2.1
+- Updated Revolution Slider to 5.4.5.2
+- Fixed potential security issue when saving theme options
+
+1.6
+- Added Woocommerce 3+ compatibility
+- Updated Visual Composer to 5.1.1
+- Updated Revolution Slider to 5.4.3.1
+- Updated Edge CPT to 1.2.1 version
+- Fixed Slide From Header Bottom search type for Classic Header
+- Fixed Add To Cart and Social button styling
+
+1.5.1
+- Updated Edge Membership plugin to 1.1
+- Updated Revolution Slider to 5.4
+- Updated the Edge Membership registration form
+- Fixed the Quick View popup issue
+- Fixed the issue with the product category sidebar
+
+1.5
+- Added Woocommerce 2.6.9 compatibility
+- Updated Visual Composer to 5.0.1
+- Updated Revolution Slider to 5.3.1.5
+- Updated Font Awesome to 4.7.0
+- Fixed typed effect on custom font element
+
+1.4
+- Added Woocommerce 2.6.8 compatibility
+- Updated Visual Composer to 5.0
+- Updated Revolution Slider to 5.3.0.2
+- Updated Edge CPT to 1.2 version
+- Fixed script loading for dynamic styles
+- Fixed boxed layout
+
+1.3
+- Added Woocommerce 2.6.6 compatibility
+- Added Google Maps API key option
+- Updated Visual Composer to 4.12.1
+- Updated Revolution Slider to 5.3
+- Updated Font Awesome Icon pack to 4.6.3
+
+1.2.1
+- Improved Product Zoom Image functionality
+- Updated Revolution Slider to 5.2.6
+- Fixed Passepartout Size label in General options
+
+1.2
+- Added Header Classic type
+- Added Widget Area for Header Classic Type
+- Added Logo option for Header Classic Type
+- Added Arrows Navigation Skin option for Edge Slider
+- Added Bullets Navigation Skin option for Edge Slider
+- Added Enable Grid Layout option for Top Header Area per page
+- Updated Edge CPT to 1.1 version
+- Updated Edge CPT pot file for translation
+- Fixed quantity input field in quick view popup
+- Fixed social share on mobiles
+
+1.1
+- Added Woocommerce 2.6.1 compatibility
+- Updated pot file for translation
+- Fixed minor bugs

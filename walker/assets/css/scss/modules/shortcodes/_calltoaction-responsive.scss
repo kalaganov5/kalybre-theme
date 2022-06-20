@@ -1,0 +1,24 @@
+/* ==========================================================================
+# Call to action responsive style - begin
+========================================================================== */
+
+@include ipad-portrait {
+
+    .edgtf-call-to-action {
+
+        .edgtf-text-wrapper {
+            .edgtf-call-to-action-text {
+                margin: 10px;
+            }
+        }
+        .edgtf-call-to-action-buttons {
+            a {
+                margin: 8px;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+# Call to action responsive style - end
+========================================================================== */

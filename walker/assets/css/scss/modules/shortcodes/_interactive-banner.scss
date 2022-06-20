@@ -1,0 +1,46 @@
+/* ==========================================================================
+# Interactive Banner style - begin
+========================================================================== */
+
+.edgtf-interactive-banner-holder {
+    @include edgtfRelativeHolderLayout();
+
+    .edgtf-interactive-banner-image {
+        position: relative;
+        display: inline-block;
+        max-width: 100%;
+        vertical-align: middle;
+        overflow: hidden;
+
+        img {
+            display: block;
+        }
+    }
+
+    .edgtf-interactive-banner-info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 5% 5% 5% 5%;
+        @include edgtfBoxSizing(border-box);
+
+        .edgtf-interactive-banner-title {
+            margin: 0 0 9px;
+        }
+
+        .edgtf-interactive-banner-description {
+            margin: 21px 0 9px;
+            font-size: 18px;
+            line-height: 34px;
+            color: $default-heading-color;
+        }
+
+        .edgtf-btn {
+            margin: 0;
+        }
+    }
+}
+/* ==========================================================================
+# Interactive Banner style - end
+========================================================================== */

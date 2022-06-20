@@ -1,0 +1,30 @@
+/* ==========================================================================
+   WooCommerce Result and Ordering Responsive styles - begin
+   ========================================================================== */
+.edgtf-woocommerce-page {
+    
+    @include phone-landscape {
+        
+        .woocommerce-result-count,
+        .woocommerce-ordering {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        
+        .woocommerce-ordering {
+            text-align: initial;
+            
+            .orderby {
+                display: block;
+                float: none;
+            }
+    
+            .select2-container .select2-choice {
+                padding-left: 0;
+            }
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Result and Ordering Responsive styles - end
+   ========================================================================== */

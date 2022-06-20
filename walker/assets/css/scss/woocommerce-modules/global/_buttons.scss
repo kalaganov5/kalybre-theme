@@ -1,0 +1,70 @@
+/* ==========================================================================
+   WooCommerce Buttons styles - begin
+   ========================================================================== */
+
+.woocommerce-page .edgtf-content,
+div.woocommerce {
+
+    a.button,
+    a.added_to_cart,
+    input[type="submit"],
+    button[type="submit"] {
+        position: relative;
+        display: inline-block;
+        width: auto;
+        height: 54px;
+        line-height: 54px;
+        padding: 0 46px;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: #fff;
+        background-color: $default-heading-color;    
+        border: 0;
+        outline: none;
+        white-space: nowrap;
+        cursor: pointer;
+        vertical-align: middle;
+        text-transform: uppercase;
+        overflow: hidden;
+        @include edgtfBoxSizing(border-box);
+        @include edgtfTransition(color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out);
+
+        &:hover {
+            color: #fff;
+            background-color: $first-main-color;
+        }      
+    }
+
+    a.button.added {
+        display: none;
+    }
+
+    .wc-forward:not(.added_to_cart):not(.checkout-button) {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: auto;
+        height: 38px;
+        line-height: 38px;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 0 28px;
+        color: $default-heading-color;
+        background-color: transparent;
+        border: 1px solid $default-border-color;
+        @include edgtfTransition(color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out);
+        @include edgtfBoxSizing(border-box);
+
+        &:hover {
+            color: #fff;
+            background-color: $default-heading-color;
+            border-color: $default-heading-color;
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Buttons styles - end
+   ========================================================================== */

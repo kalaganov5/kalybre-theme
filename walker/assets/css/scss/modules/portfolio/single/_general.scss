@@ -1,0 +1,280 @@
+@import 'small-images';
+@import 'small-slider';
+@import 'big-images';
+@import 'big-slider';
+@import 'gallery';
+
+.edgtf-portfolio-single-holder {
+
+    .edgtf-portfolio-video-lightbox {
+        position: relative;
+        display: block;
+
+        img {
+            display: block;
+        }
+    }
+
+    .edgtf-portfolio-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(51, 51, 51, 0.8);
+        color: #fff;
+
+        .edgtf-portfolio-play-icon {
+            position: absolute;
+            font-size: 20px;
+            left: 50%;
+            top: 50%;
+
+            @include edgtfTransform(translate(-50%, -50%));
+        }
+    }
+
+    .edgtf-portfolio-item-title {
+        margin: 0 0 25px;
+        line-height: 1em;
+    }
+
+    .edgtf-portfolio-item-author {
+        display: block;
+        padding: 13px 0 0;
+    }
+
+    .edgtf-portfolio-author-label {
+        color: $default-heading-color;
+        font-weight: 500;
+    }
+
+    .edgtf-portfolio-info-item.edgtf-content-item {
+        margin: 0 0 32px;
+    }
+
+    .edgtf-portfolio-info-item:not(.edgtf-content-item) {
+        margin: 2px 0;
+        
+        .edgtf-portfolio-info-title,
+        p {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+        }
+
+        .edgtf-portfolio-info-title {
+            color: $default-heading-color;
+            font-weight: 500;
+        }
+
+        &.edgtf-portfolio-social {
+            margin: 2px 0 0;
+
+            .edgtf-portfolio-social-label {
+                color: $default-heading-color;
+                font-weight: 500;
+                padding: 0 10px 0 0;
+            }
+
+            .edgtf-social-share-holder li {
+                margin: 0 13px 3px 0;
+            }
+        }
+    }
+}
+
+.edgtf-portfolio-single-navigation {
+    position: relative;
+    display: table;
+    width: 100%;
+    vertical-align: middle;
+    padding: 0;
+    margin: 55px 0 0;
+    clear: both;
+
+    .edgtf-portfolio-back-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: inline-block;
+        vertical-align: middle;
+        @include edgtfTransform(translateX(-50%) translateY(-50%));
+
+        a {
+            position: relative;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            vertical-align: middle;
+            cursor: pointer;
+            font-size: 32px;
+            line-height: 1;
+            color: $default-heading-color;
+
+            &:hover {
+                color: #999;
+            }
+
+            span {
+                display: block;
+                line-height: inherit;
+
+                &:before {
+                    display: block;
+                    line-height: inherit;
+                }
+            }
+        }
+    }
+
+    .edgtf-portfolio-single-prev,
+    .edgtf-portfolio-single-next {
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+        width: 49%;
+        padding: 0;
+        @include edgtfBoxSizing(border-box);
+
+        > * {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        a {
+            color: $default-heading-color;
+
+            > * {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .edgtf-portfolio-single-nav-mark {
+                font-size: 60px;
+                line-height: inherit;
+
+                &:before {
+                    display: block;
+                    line-height: inherit;
+                }
+            }
+
+            .edgtf-portfolio-single-nav-text {
+                font-size: 12px;
+                line-height: inherit;
+                font-weight: 500;
+                letter-spacing: 1.5px;
+            }
+
+            &:hover {
+                color: $first-main-color;
+            }
+        }
+
+        .edgtf-portfolio-single-nav-image {
+            margin: 0;
+
+            img {
+                display: block;
+            }
+        }
+    }
+
+    .edgtf-portfolio-single-prev {
+
+        a {
+            margin: 0 15px 0 0;
+
+            .edgtf-portfolio-single-nav-mark {
+                left: 0;
+            }
+
+            .edgtf-portfolio-single-nav-text {
+                left: -10px;
+                @include edgtfTransition(left .2s ease-out);
+            }
+
+            &:hover {
+                .edgtf-portfolio-single-nav-text {
+                    left: -15px;
+                }
+            }
+        }
+    }
+
+    .edgtf-portfolio-single-next {
+        text-align: right;
+
+        a {
+            margin: 0 0 0 15px;
+
+            .edgtf-portfolio-single-nav-mark {
+                right: 0;
+            }
+
+            .edgtf-portfolio-single-nav-text {
+                right: -10px;
+                @include edgtfTransition(right .2s ease-out);
+            }
+
+            &:hover {
+                .edgtf-portfolio-single-nav-text {
+                    right: -15px;
+                }
+            }
+        }
+    }
+}
+
+@include ipad-portrait {
+
+    .edgtf-portfolio-single-navigation {
+
+        .edgtf-portfolio-single-prev,
+        .edgtf-portfolio-single-next {
+
+            a {
+
+                .edgtf-portfolio-single-nav-mark {
+                    font-size: 50px;
+                }
+            }
+
+            .edgtf-portfolio-single-nav-image {
+                max-width: 84px;
+            }
+        }
+
+        .edgtf-portfolio-single-prev {
+
+            a {
+                margin: 0 10px 0 0;
+            }
+        }
+
+        .edgtf-portfolio-single-next {
+
+            a {
+                margin: 0 0 0 10px;
+            }
+        }
+    }
+}
+
+@include phone-landscape {
+
+    .edgtf-portfolio-single-navigation {
+
+        .edgtf-portfolio-single-prev,
+        .edgtf-portfolio-single-next  {
+
+            .edgtf-portfolio-single-nav-image {
+                display: none;
+            } 
+        }
+    }
+}

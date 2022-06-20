@@ -1,0 +1,101 @@
+@media only screen and (max-width: $laptop-landscape) {
+
+    .edgtf-blog-list-holder {
+
+        .edgtf-item-text-holder {
+            padding: 30px 30px 37px;
+        }
+    }
+}
+
+@media only screen and (max-width: $ipad-landscape) {
+
+    .edgtf-blog-list-holder {
+
+        .edgtf-item-text-holder {
+            padding: 30px 24px 35px;
+        }
+    }
+
+    .edgtf-blog-list-holder.edgtf-standard {
+
+        &.edgtf-four-columns {
+
+            .edgtf-blog-list > li {
+                width: 50%;
+
+                &:nth-child(2n+1) {
+                    clear: both;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $ipad-portrait) {
+
+    .edgtf-blog-list-holder.edgtf-masonry {
+
+        .edgtf-blog-list > li,
+        .edgtf-blog-masonry-grid-sizer {
+            width: 47.5%;
+        }
+
+        .edgtf-blog-masonry-grid-gutter {
+            width: 5%;
+        }
+
+        &.edgtf-small-space {
+
+            .edgtf-blog-list > li,
+            .edgtf-blog-masonry-grid-sizer {
+                width: 49.16666666666667%;
+            }
+
+            .edgtf-blog-masonry-grid-gutter {
+                width: 1.666666666666667%;
+            }
+        }
+    }
+
+    .edgtf-blog-list-holder.edgtf-standard {
+
+        &.edgtf-three-columns {
+
+            .edgtf-blog-list > li {
+                width: 50%;
+
+                &:nth-child(3n+1) {
+                    clear: none;
+                }
+
+                &:nth-child(2n+1) {
+                    clear: both;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $phone-landscape) {
+
+    .edgtf-blog-list-holder.edgtf-masonry {
+
+        .edgtf-blog-list > li,
+        .edgtf-blog-masonry-grid-sizer {
+            width: 100% !important;
+        }
+
+        .edgtf-blog-masonry-grid-gutter {
+            width: 0% !important;
+        }
+    }
+
+    .edgtf-blog-list-holder.edgtf-standard {
+
+        .edgtf-blog-list > li {
+            width: 100% !important;
+            float: none;
+        }
+    }
+}

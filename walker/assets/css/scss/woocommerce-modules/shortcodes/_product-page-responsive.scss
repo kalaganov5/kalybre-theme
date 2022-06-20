@@ -1,0 +1,134 @@
+/* Woocommerce Product Page shortcode responsive style - begin
+========================================================================== */
+
+@include ipad-portrait {
+
+    div.woocommerce {
+
+        > .single-product {
+
+            .woocommerce-tabs {
+
+                ul.tabs {
+
+                    > li {
+                        padding: 5px 6px;
+
+                        a {
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+
+            .related.products {
+
+                .edgtf-related-title {
+
+                    .edgtf-related-text {
+                        padding: 0 30px;
+                    }
+                }
+            }
+
+            .upsells.products {
+
+                .edgtf-upsells-title {
+
+                    .edgtf-upsells-text {
+                        padding: 0 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include phone-landscape {
+
+    div.woocommerce {
+
+        > .single-product {
+
+            .images {
+
+                .thumbnails {
+
+                    &.columns-4 {
+
+                        a {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+
+            .related.products {
+
+                .edgtf-related-title {
+
+                    .edgtf-related-text {
+                        padding: 0 20px;
+                    }
+                }
+            }
+
+            .upsells.products {
+
+                .edgtf-upsells-title {
+
+                    .edgtf-upsells-text {
+                        padding: 0 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include phone-portrait {
+
+    div.woocommerce {
+
+        > .single-product {
+
+            .woocommerce-tabs {
+
+                ul.tabs {
+
+                    > li {
+                        float: none;
+                        width: 100%;
+                        padding: 8px 0 5px;
+
+                        a {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .related.products {
+
+                .edgtf-related-title {
+
+                    .edgtf-related-text {
+                        padding: 0 12px;
+                    }
+                }
+            }
+
+            .upsells.products {
+
+                .edgtf-upsells-title {
+
+                    .edgtf-upsells-text {
+                        padding: 0 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+/* Woocommerce Product Page shortcode responsive style - end
+========================================================================== */

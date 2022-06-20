@@ -1,0 +1,63 @@
+/* ==========================================================================
+   YITH Quick View Responsive styles - begin
+   ========================================================================== */
+
+@media only screen and (max-width: $ipad-landscape) {
+
+    #yith-quick-view-modal {
+
+        .yith-wcqv-wrapper {
+            max-width: 768px;
+        }
+    }
+}
+
+@media only screen and (max-width: $ipad-portrait) {
+
+    #yith-quick-view-modal {
+
+        .yith-wcqv-wrapper {
+            max-width: 600px;
+        }
+
+        #yith-quick-view-content {
+
+            .images,
+            .summary {
+                width: 100%;
+            }
+
+            .summary {
+                padding: 32px 30px 30px;
+            }
+        }
+
+        #yith-quick-view-close {
+            top: 5px;
+            right: 5px;
+        }
+    }
+}
+
+@media only screen and (max-width: $phone-landscape) {
+
+    #yith-quick-view-modal {
+
+        .yith-wcqv-wrapper {
+            max-width: 480px;
+        }
+    }
+}
+
+@media only screen and (max-width: $phone-portrait) {
+
+    #yith-quick-view-modal {
+
+        .yith-wcqv-wrapper {
+            max-width: 300px;
+        }
+    }
+}
+/* ==========================================================================
+   YITH Quick View Responsive styles - end
+   ========================================================================== */

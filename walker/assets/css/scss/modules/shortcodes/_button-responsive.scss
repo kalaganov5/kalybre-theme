@@ -1,0 +1,36 @@
+/* ==========================================================================
+ Buttons Responsive styles - begin
+ ========================================================================== */
+
+@media only screen and (max-width: $laptop-landscape) {
+
+	.edgtf-btn {
+
+		&.edgtf-btn-large,
+		&.edgtf-btn-huge {
+			padding: 10px 36px;
+		}
+
+		&.edgtf-btn-solid.edgtf-btn-solid-animate {
+
+            &.edgtf-btn-large {
+
+                &:before,
+                &:after {
+                    padding: 10px 0;
+                }
+            }
+
+            &.edgtf-btn-huge {
+
+                &:before,
+                &:after {
+                    padding: 10px 0;
+                }
+            }
+        }
+	}
+}
+/* ==========================================================================
+ Buttons Responsive styles - end
+ ========================================================================== */

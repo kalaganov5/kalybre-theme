@@ -1,0 +1,94 @@
+/* ==========================================================================
+   #Twitter feed
+   ========================================================================== */
+
+.edgtf-twitter-widget {
+    @include edgtfRelativeHolderLayout();
+
+    li {
+        @include edgtfRelativeHolderLayout();
+
+        &:not(:last-child) {
+            margin: 0 0 25px !important;
+        }
+
+        .edgtf-twitter-icon {
+            position: absolute;
+            top: 2px;
+            left: 0;
+
+            i {
+                font-size: 18px;
+                color: $default-text-color;
+            }
+        }
+
+        .edgtf-tweet-text {
+            position: relative;
+            padding: 0 0 0 39px;
+            line-height: 27px;
+            color: $default-text-color;
+
+            a {
+                position: relative;
+                line-height: inherit;
+                color: $default-heading-color;
+
+                &:hover,
+                .edgtf-footer-top-holder &:hover{
+                    color: $first-main-color;
+                }
+
+                &.edgtf-tweet-time {
+                    display: block;
+
+                    span {
+                        margin: 0 2px 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer,
+.edgtf-side-menu,
+.edgtf-vertical-menu-area,
+.edgtf-top-bar {
+
+    .edgtf-twitter-widget {
+
+        li {
+            .edgtf-tweet-text {
+                a {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+footer {
+
+    &.edgtf-footer-skin-light {
+
+        .edgtf-twitter-widget {
+
+            li {
+                .edgtf-twitter-icon {
+                    i {
+                        color: $default-text-color;
+                    }
+                }
+
+                .edgtf-tweet-text {
+                    color: $default-text-color;
+
+                    a {
+                        color: $default-heading-color;
+                    }
+                }
+            }
+        }
+    }
+}

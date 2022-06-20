@@ -1,0 +1,150 @@
+/* ==========================================================================
+   Frame Slider Styles - Start
+   ========================================================================== */
+
+.edgtf-frame-slider {
+	opacity: 0;
+	text-align: center;
+	-webkit-transform: translateZ(0); //prevents disappearing content in chrome
+
+	.edgtf-frame-slider-left-panel {
+		display: inline-block;
+		max-width: 60%;
+	}
+
+	.edgtf-left-panel-frame {
+		position: relative;
+		max-width: 1040px;
+	}
+
+	.edgtf-frame-image {
+		position: relative;
+		z-index: 30;
+		pointer-events:none;
+		body[class*="edgtf-ms-ie"] & {
+			z-index: 10;
+		}
+	}
+
+	.edgtf-left-panel-absolute {
+		position: absolute;
+		height: 73.5%;
+	    width: 76.4%;
+	    left: 11.8%;
+	    top: 7.2%;
+		z-index: 20;
+	}
+
+	.owl-carousel {
+	    .owl-grab {
+	        cursor: -webkit-grab;
+	        cursor: grab;
+	    }
+
+	    .owl-stage {
+	    	overflow: hidden;
+	    }
+
+	    .owl-item {
+	        @include edgtfTransform(translateZ(0));
+	    }
+	    
+	    .owl-controls {
+	    	position: absolute;
+	    	bottom: -10%;
+	    	left:123%;
+	    	width: 30%;
+	    	text-align: left;
+	        .owl-dot {
+	            display: inline-block;
+	            position: relative;
+	            height: 12px;
+	            width: 12px;
+	            @include edgtfBorderRadius(50%);
+	            margin:6px;
+	            background-color:#b7b7b7;
+	            @include edgtfTransition(.2s);
+	            &:after {
+	                content: '';
+	                position: absolute;
+	                top:0;
+	                left:0;
+	                height: 100%;
+	                width: 100%;
+	                @include edgtfBorderRadius(50%);
+	                @include edgtfTransform(scale(.2));
+	                background-color: #333;
+	                opacity: 0;
+	                outline:1px solid outline; //moz pixelation fix
+	                -webkit-transition: opacity .15s ease-out, -webkit-transform .25s ease-out;
+	                transition: opacity .15s ease-out, transform .25s ease-out;
+	            }
+	            &.active {
+	                background-color:transparent;
+	                &:after {
+	                    opacity: 1;
+	                    @include edgtfTransform(scale(1));
+	                    -webkit-transition: opacity .2s, -webkit-transform .6s;
+	                    transition: opacity .2s, transform .6s;
+	                }
+	            }
+	        }
+	    }
+	}
+
+	.edgtf-frame-slider-right-panel {
+		display: inline-block;
+		max-width: 22%;
+		vertical-align: top;
+		margin: 0 3.5%;
+		text-align: left;
+		.owl-carousel {
+			position: static;
+		}
+		.owl-controls {
+			display: none;
+		    .owl-dot {
+		        display: inline-block;
+		        position: relative;
+		        height: 12px;
+		        width: 12px;
+		        @include edgtfBorderRadius(50%);
+		        margin:6px;
+		        background-color:#b7b7b7;
+		        @include edgtfTransition(.2s);
+		        &:after {
+		            content: '';
+		            position: absolute;
+		            top:0;
+		            left:0;
+		            height: 100%;
+		            width: 100%;
+		            @include edgtfBorderRadius(50%);
+		            @include edgtfTransform(scale(.2));
+		            background-color: #333;
+		            opacity: 0;
+		            -webkit-transition: opacity .15s ease-out, -webkit-transform .25s ease-out;
+		            transition: opacity .15s ease-out, transform .25s ease-out;
+		        }
+		        &.active {
+		            background-color:transparent;
+		            &:after {
+		                opacity: 1;
+		                @include edgtfTransform(scale(1));
+		                -webkit-transition: opacity .2s, -webkit-transform .6s;
+		                transition: opacity .2s, transform .6s;
+		            }
+		        }
+		    }
+		}
+	}
+	.edgtf-frame-slider-title {
+		margin-top: 10px;
+	}
+	.edgtf-frame-slider-description {
+		margin-bottom: 40px;
+	}
+}
+/* ==========================================================================
+   Frame Slider Styles - End
+   ========================================================================== */

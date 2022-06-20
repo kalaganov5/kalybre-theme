@@ -1,0 +1,18 @@
+.edgtf-header-vertical {
+
+    .edgtf-vertical-area-widget-holder {
+        @include edgtfRelativeHolderLayout();
+        margin: 10px 0 0;
+        z-index: 100;
+    }
+
+    .edgtf-vertical-area-bottom-widget-holder {
+        position: absolute;
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+        bottom: 25px;
+        left: 0;
+        z-index: 100;
+    }
+}

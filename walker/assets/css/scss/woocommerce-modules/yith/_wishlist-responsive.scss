@@ -1,0 +1,118 @@
+/* ==========================================================================
+   YITH WishList responsive styles - begin
+   ========================================================================== */
+
+@media only screen and (max-width: $ipad-landscape) {
+
+    .woocommerce {
+
+        table.wishlist_table {
+
+            thead {
+
+                tr {
+
+                    th {
+                        padding: 18px 10px;
+                    }
+                }
+            }
+
+            tbody {
+
+                tr {
+
+                    td {
+                        padding: 18px 10px;
+
+                        &.product-remove {
+                            padding: 18px 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $ipad-portrait) {
+
+    .woocommerce {
+
+        table.wishlist_table {
+
+            thead {
+
+                tr {
+
+                    th {
+                        padding: 16px 8px;
+                    }
+                }
+            }
+
+            tbody {
+
+                tr {
+
+                    td {
+                        padding: 16px 8px;
+
+                        &.product-remove {
+                            padding: 16px 12px;
+                        }
+
+                        &.product-add-to-cart {
+
+                            a {
+                                height: 38px;
+                                line-height: 38px;
+                                padding: 0 28px;
+                                margin: 10px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $phone-landscape) {
+
+    .woocommerce {
+
+        table.wishlist_table {
+
+            thead {
+
+                tr {
+
+                    th {
+                        font-size: 11px;
+                        letter-spacing: 1px;
+                        padding: 16px 4px;
+                    }
+                }
+            }
+
+            tbody {
+
+                tr {
+
+                    td {
+                        font-size: 12px;
+                        padding: 16px 4px;
+
+                        &.product-remove {
+                            padding: 16px 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   YITH WishList responsive styles - end
+   ========================================================================== */

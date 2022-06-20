@@ -1,0 +1,73 @@
+@media only screen and (max-width: $ipad-landscape) {
+
+    .edgtf-st-holder {
+
+        &.edgtf-st-title-position-center {
+
+            .edgtf-st-title {
+              padding: 0 32px;
+            }
+
+        }
+
+        &.edgtf-st-title-position-left {
+
+            .edgtf-st-title {
+              padding: 0 15px 0 0;
+            }
+
+        }
+
+    }
+
+}
+
+@media only screen and (max-width: $ipad-portrait) {
+
+    .edgtf-st-holder {
+
+        &.edgtf-st-title-position-center {
+
+            .edgtf-st-title {
+              padding: 0 24px;
+            }
+
+        }
+
+        &.edgtf-st-title-position-left {
+
+            .edgtf-st-title {
+              padding: 0 15px 0 0;
+            }
+
+        }
+
+    }
+
+}
+
+@media only screen and (max-width: $phone-landscape) {
+
+    .edgtf-st-holder {
+
+        &.edgtf-st-title-position-center {
+
+            .edgtf-st-title {
+              padding: 0 20px;
+            }
+
+        }
+
+        &.edgtf-st-title-position-left {
+
+            .edgtf-st-title {
+              padding: 0 15px 0 0;
+            }
+
+        }
+
+    }
+
+}
+
+

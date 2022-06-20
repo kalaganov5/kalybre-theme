@@ -1,0 +1,48 @@
+@media only screen and (max-width: $phone-landscape) {
+    .edgtf-tabs .edgtf-tabs-nav,
+    .edgtf-tabs .edgtf-tab-container,
+    .edgtf-tabs.edgtf-vertical-tab .edgtf-tabs-nav,
+    .edgtf-tabs.edgtf-vertical-tab .edgtf-tab-container {
+        width: 100%;
+    }
+
+    .edgtf-tabs {
+
+        &.edgtf-horizontal-tab,
+        &.edgtf-vertical-tab {
+
+            .edgtf-tabs-nav {
+
+                float: none;
+                padding: 0;
+                line-height: inherit;
+                border-left: none;
+                border-bottom: none;
+
+                li {
+                    float: none;
+                    display: block;
+                    margin: 0;
+                    padding: 8px 2px;
+                    border-left: none;
+                    border-bottom: 1px solid $default-border-color;
+
+                    &:not(:last-child) {
+                        margin: 0px;
+                    }
+
+                    &.ui-tabs-active {
+                        border-left: none;
+                        border-bottom: 1px solid $default-heading-color;
+                    }
+                }
+            }
+
+            .edgtf-tab-container {
+                float: none;
+                border-left: 0;
+                padding: 9px 0;
+            }
+        }
+    }
+}

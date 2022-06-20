@@ -1,0 +1,152 @@
+/* ==========================================================================
+# Tabs style - begin
+========================================================================== */
+.edgtf-tabs {
+
+    .edgtf-tabs-nav {
+        display: block;
+        position: relative;
+        list-style: none outside none;
+        margin: 0;
+        padding: 0;
+        vertical-align: middle;
+        @include edgtfBoxSizing(border-box);
+
+        li {
+            margin: 0;
+
+            a {
+                position: relative;
+                display: block;
+                color: $default-text-color;
+                padding: 0;
+                font-size: 12px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                @include edgtfBoxSizing(border-box);
+                @include edgtfTransition(color 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out);
+
+                i,
+                span {
+                    @include edgtfTransition(initial);
+                }
+
+                .edgtf-icon-frame {
+                    display: inline-block;
+                    min-width: 20px;
+                    line-height: 1;
+                    vertical-align: middle;
+                }
+
+                .edgtf-tab-text-title {
+                    @include edgtfTransition(initial);
+                    vertical-align: middle;
+                }
+            }
+
+            &.ui-state-active a,
+            &.ui-state-hover a {
+                color: $default-heading-color;
+            }
+        }
+    }
+
+    .edgtf-tab-container {
+        position: relative;
+        @include edgtfBoxSizing(border-box);
+    }
+}
+
+/* Horizontal tabs styles
+   ========================================================================== */
+.edgtf-tabs.edgtf-horizontal-tab {
+
+    .edgtf-tabs-nav {
+        padding: 0 0 0px;
+        margin: 0 0 3px;
+        border-bottom: 1px solid $default-border-color;
+
+        li {
+            float: left;
+            margin: 0 0 -1px;
+            padding: 0 2px 8px;
+            border-bottom: 1px solid $default-border-color;
+            position: relative;
+            &:after {
+                content:'';
+                position: absolute;
+                bottom: -1px;
+                left:0;
+                width: 0;
+                height: 0;
+                border-bottom: 1px solid $default-heading-color;
+                @include edgtfTransition(width .2s);
+            }
+
+            &:not(:last-child) {
+                margin-right: 38px;
+            }
+
+            &.ui-tabs-active {
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .edgtf-tab-container {
+        padding: 10px 0;
+    }
+}
+
+/* Vertical tabs styles
+   ========================================================================== */
+.edgtf-tabs.edgtf-vertical-tab {
+
+    .edgtf-tabs-nav {
+        float: left;
+        width: 40%;
+        line-height: 43px;
+        border-left: 1px solid $default-border-color;
+
+        li {
+            position: relative;
+            display: block;
+            width: 100%;
+            margin: 0 0 0 -1px;
+            padding: 0 0 0 28px;
+            border-left: 1px solid $default-border-color;
+            position: relative;
+            &:after {
+                content:'';
+                position: absolute;
+                top: 0;
+                left: -1px;
+                width: 0;
+                height: 0;
+                border-left: 1px solid $default-heading-color;
+                @include edgtfTransition(height .2s);
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 7px;
+            }
+
+            &.ui-tabs-active {
+                &:after {
+                    height:100%;
+                }
+            }
+        }
+    }
+
+    .edgtf-tab-container {
+        float: left;
+        width: 60%;
+        padding: 10px 30px;
+    }
+}
+/* ==========================================================================
+# Tabs style - end
+========================================================================== */

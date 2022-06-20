@@ -1,0 +1,38 @@
+/* ==========================================================================
+# Ordered List Style - begin
+========================================================================== */
+.edgtf-ordered-list ol,
+.edgtf-ordered-list ul {
+    display: block;
+    counter-reset: li;
+    list-style-type: none;
+    margin: 0;
+
+    li {
+        position: relative;
+        margin: 0 0 7px;
+        padding: 0 0 0 36px;
+        line-height: 24px;
+
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            color: #fff;
+            background-color: $default-heading-color;
+            border-radius: 4em;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 300;
+            content: counter(li, decimal-leading-zero);
+            counter-increment: li;
+        }
+    }
+}
+/* ==========================================================================
+# Ordered List Style - end
+========================================================================== */

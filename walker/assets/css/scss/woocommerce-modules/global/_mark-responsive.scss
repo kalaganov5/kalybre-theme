@@ -1,0 +1,17 @@
+/* ==========================================================================
+   WooCommerce Onsale, Out of Stock and New responsive styles - begin
+   ========================================================================== */
+
+@media only screen and (max-width: $ipad-landscape) {   
+
+    .edgtf-woo-single-page {
+
+        .edgtf-out-of-stock,
+        .edgtf-new-product {
+            right: 0;
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Onsale, Out of Stock and New responsive styles - end
+   ========================================================================== */

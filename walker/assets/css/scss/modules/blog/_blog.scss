@@ -1,0 +1,844 @@
+/* ==========================================================================
+# Blog styles - begin
+========================================================================== */
+
+.edgtf-blog-holder {
+    @include edgtfRelativeHolderLayout();
+    clear: both;
+
+    /* Global holder styles - begin
+    ====================================================================== */
+    article {
+        margin: 0 0 14px;
+        padding: 0;
+
+        &.sticky {
+
+            .edgtf-post-title a {
+                text-decoration: underline;
+            }
+        }
+
+        .edgtf-post-content {
+            @include edgtfRelativeHolderLayout();
+        }
+
+        .edgtf-post-image {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 100%;
+
+            img {
+                display: block;
+            }
+        }
+
+        .edgtf-post-text {
+            padding: 36px 40px 47px;
+            background-color: #fff;
+        }
+
+        .edgtf-post-title {
+            margin: 0 0 19px;
+        }
+
+        .edgtf-post-excerpt {
+            margin: 0;
+
+            &:after {
+                content: '...';
+            }
+        }
+
+        .edgtf-post-read-more-holder,
+        .edgtf-more-link-container {
+            @include edgtfRelativeHolderLayout();
+            margin: 19px 0 0;
+        }
+
+        .edgtf-post-info {
+            @include edgtfRelativeHolderLayout();
+            line-height: 1;
+            margin: 0 0 9px;
+            clear: both;
+
+            > div {
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                float: left;
+                padding: 0 17px 6px 0;
+                color: inherit;
+                font-size: 12px;
+                line-height: 20px;
+
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    right: 5px;
+                    content: '/';
+                }
+
+                &:last-child {
+                    padding: 0 0 6px;
+
+                    &:after {
+                        display: none;
+                    }
+                }
+
+                &.edgtf-post-info-author {
+
+                    .edgtf-post-info-author-text {
+                        margin: 0 3px 0 0;
+                    }
+                }
+
+                &.edgtf-blog-like {
+
+                    a > i {
+                        margin: 0 5px 0 0;
+                    }
+                }
+
+                a {
+                    color: inherit;
+                    line-height: inherit;
+                    font-size: inherit;
+                    font-weight: inherit;
+
+                    &:hover {
+                        color: $default-heading-color;
+                    }
+                }
+            }
+        }
+
+        &.format-link {
+
+            .edgtf-link-container {
+
+                .edgtf-link-text {
+                    position: relative;
+                    display: block;
+                    color: $default-heading-color;
+                }
+
+                .edgtf-link-icon,
+                .edgtf-link-url {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+
+                .edgtf-link-icon {
+                    position: relative;
+                    left: -2px;
+                    padding: 0 15px 0 0;
+                    font-size: 22px;
+                }
+            }
+        }
+
+        &.format-quote {
+
+            .edgtf-quote-container {
+
+                .edgtf-quote-text {
+                    position: relative;
+                    display: block;
+                }
+
+                .edgtf-quote-icon,
+                .edgtf-quote-meta {
+                    display: table-cell;
+                    vertical-align: top;
+                }
+
+                .edgtf-quote-icon {
+                    position: relative;
+                    top: -3px;
+                    left: -6px;
+                    font-size: 30px;
+                    padding: 0 5px 0 0;
+                    color: $default-heading-color;
+                }
+            }
+        }
+
+        &.format-gallery {
+
+            .edgtf-post-image {
+                width: 100%;
+            }
+
+            .owl-carousel .owl-item {
+                z-index: 2;
+
+                &.active {
+                    z-index: 3;
+                }
+            }
+        }
+
+        &.format-audio {
+
+            .edgtf-post-content > .edgtf-blog-audio-holder {
+
+            }
+
+            .edgtf-post-image {
+
+                .edgtf-blog-audio-holder {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+
+            .edgtf-blog-audio-holder {
+                margin: 0;
+
+                .mejs-container, .mejs-embed, .mejs-embed body, .mejs-container .mejs-controls {
+                    background: none;
+                }
+
+                .mejs-container {
+                    background-color: rgba(51, 51, 51, 0.8);
+                }
+
+                .mejs-container,
+                .mejs-container .mejs-controls {
+                    height: 36px !important;
+                }
+
+                .mejs-container .mejs-controls {
+                    padding: 0 10px 0 4px;
+                    @include edgtfBoxSizing(border-box);
+                }
+
+                .mejs-container .mejs-controls > .mejs-playpause-button {
+                    width: 39px;
+                }
+
+                .mejs-container .mejs-controls > .mejs-volume-button {
+                    width: 30px;
+                }
+
+                .mejs-container .mejs-controls > .mejs-playpause-button,
+                .mejs-container .mejs-controls > .mejs-volume-button {
+                    height: 36px;
+
+                    button {
+                        position: relative;
+                        height: 100%;
+                        background: none;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        margin: 0;
+                        border: 0;
+                        outline: none;
+                    }
+
+                    &.mejs-play button {
+                        width: 39px;
+                        background-image: url('img/audio/play.png');
+                    }
+
+                    &.mejs-pause button {
+                        width: 39px;
+                        background-image: url('img/audio/pause.png');
+                    }
+
+                    &.mejs-stop button {
+                        width: 39px;
+                        background-image: url('img/audio/stop.png');
+                    }
+
+                    &.mejs-mute button {
+                        width: 30px;
+                        background-image: url('img/audio/sound.png');
+                    }
+
+                    &.mejs-unmute button {
+                        width: 30px;
+                        background-image: url('img/audio/mute.png');
+                    }
+                }
+
+                .mejs-container .mejs-controls > .mejs-time {
+                    height: 100%;
+                    padding: 0;
+                    font-family: inherit;
+                    font-size: 13px;
+                    color: #fff;
+                    line-height: 36px;
+                }
+
+                .mejs-container .mejs-controls > .mejs-time-rail {
+                    height: 100%;
+                    padding: 0;
+                    font-family: inherit;
+
+                    .mejs-time-total {
+                        height: 6px;
+                        margin: 15px 14px;
+                        background: none;
+                        background-color: $default-heading-color;
+
+                        .mejs-time-current {
+                            height: 6px;
+                            background: none;
+                            background-color: #fff;
+                        }
+
+                        .mejs-time-float {
+                            top: -15px;
+                            border: 0;
+                            color: #fff;
+                        }
+
+                        .mejs-time-loaded,
+                        .mejs-time-float {
+                            background: none;
+                        }
+                    }
+                }
+
+                .mejs-container .mejs-controls > a.mejs-horizontal-volume-slider {
+                    height: 36px;
+
+
+                    .mejs-horizontal-volume-total,
+                    .mejs-horizontal-volume-current {
+                        height: 6px;
+                        top: 15px;
+                        background: none;
+                    }
+
+                    .mejs-horizontal-volume-total {
+                        background-color: $default-heading-color;
+                    }
+
+                    .mejs-horizontal-volume-current {
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    /* Global holder styles - end
+    ====================================================================== */
+
+    /* Masonry holder styles - begin
+	====================================================================== */
+
+    &.edgtf-blog-type-masonry {
+        transition: none !important;
+        overflow: visible !important;
+        opacity: 0;
+        @include edgtfTransition(opacity $default-transition-speed $default-transition-property);
+
+
+        article {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            width: 32.48484848484849%;
+            margin: 0 0 14px;
+            z-index: 100;
+            @include edgtfBoxSizing(border-box);
+           
+            .edgtf-blog-gallery {
+
+                .owl-nav {
+
+                    .owl-prev {
+                        left: 12px;
+                    }
+
+                    .owl-next {
+                        right: 12px;
+                    }
+
+                    .edgtf-prev-icon,
+                    .edgtf-next-icon {
+                        font-size: 29px;
+                    }
+                }
+            }
+
+            .edgtf-post-title {
+                text-transform: uppercase;
+            }
+        }
+
+        .edgtf-blog-masonry-grid-sizer {
+            width: 32.48484848484849%;
+        }
+
+        .edgtf-blog-masonry-grid-gutter {
+            width: 1.272727272727273%;
+        }
+
+        .edgtf-content-left-from-sidebar &,
+        .edgtf-content-right-from-sidebar & {
+
+            article {
+                width: 49.03581267217631%;
+            }
+
+            .edgtf-blog-masonry-grid-sizer {
+                width: 49.03581267217631%;
+            }
+
+            .edgtf-blog-masonry-grid-gutter {
+                width: 1.928374655647383%;
+            }
+        }
+
+        #infscr-loading {
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            @include edgtfTransform(translateY(-50%));
+        }
+    }
+
+    &.edgtf-masonry-full-width {
+
+        article,
+        .edgtf-blog-masonry-grid-sizer {
+            width: 19.57514604354753%;
+        }
+
+        article {
+            margin: 0 0 0.5310674455655868%;
+        }
+
+        .edgtf-blog-masonry-grid-gutter {
+            width: 0.5310674455655868%;
+        }
+    }
+    /* Masonry holder styles - end
+    ====================================================================== */
+
+    /* Blog Single holder styles - begin
+    ====================================================================== */
+
+    &.edgtf-blog-single {
+        margin: 0 0 56px;
+
+        .edgtf-single-tags-holder {
+            position: relative;
+            display: table-cell;
+            vertical-align: top;
+            text-align: right;
+        }
+
+        .edgtf-no-social .edgtf-single-tags-holder {
+            text-align: left;
+        }
+    }
+    /* Blog Single holder styles - end
+    ====================================================================== */
+}
+
+.edgtf-article-boxed-disabled {
+
+    .edgtf-blog-holder article .edgtf-post-text,
+    .edgtf-social-share-tags-holder,
+    .edgtf-blog-single-navigation,
+    .edgtf-author-description,
+    .edgtf-related-posts-holder,
+    .edgtf-comment-form {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        background-color: transparent;
+    }
+
+    aside.edgtf-sidebar {
+        padding: 0;
+        background-color: transparent;
+    }
+}
+
+/* Blog Masonry Full Width Holder styles - begin
+	====================================================================== */
+
+.page-template-blog-masonry-full-width .edgtf-full-width-inner {
+    padding: 0 10px;
+    @include edgtfBoxSizing(border-box);
+}
+
+/* Blog Masonry Full Width Holder styles - end
+	====================================================================== */
+
+/* Infinitive Scroll and Load More styles - begin
+	====================================================================== */
+
+.edgtf-blog-load-more-button-holder,
+.edgtf-load-more-ajax-pagination {
+    @include edgtfRelativeHolderLayout();
+    margin: 30px 0 60px;
+    text-align: center;
+}
+
+.edgtf-blog-infinite-scroll-button {
+    display: none;
+}
+
+/* Infinitive Scroll and Load More styles - end
+	====================================================================== */
+
+/* Single social share and tags styles - begin
+    ====================================================================== */
+.edgtf-social-share-tags-holder {
+    position: relative;
+    display: table;
+    width: 100%;
+    padding: 0 40px 23px 40px;
+    background-color: #fff;
+    @include edgtfBoxSizing(border-box);
+}    
+
+.edgtf-single-tags-holder {
+
+    .edgtf-tags {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 25px;
+
+        a {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 5px;
+            color: $default-text-color;
+
+            &:hover {
+                color: $default-heading-color;
+            }
+        }
+    }
+
+    &.edgtf-list-tags {
+
+        .edgtf-tags {
+            margin: 15px 0 0;
+
+            a {
+                margin: 0 5px 5px 0;
+            }
+        }
+    }
+}
+
+.edgtf-blog-single-share {
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+}
+/* Single social share and tags styles - end
+    ====================================================================== */
+
+/* Single author box styles - begin
+	====================================================================== */
+
+.edgtf-author-description {
+    @include edgtfRelativeHolderLayout();
+    padding: 45px 40px;
+    margin: 0 0 14px;
+    background-color: #fff;
+    @include edgtfBoxSizing(border-box);
+
+    .edgtf-author-description-inner {
+        @include edgtfRelativeHolderLayout();
+        min-height: 110px; // static height of author image -- edgtf-author-description-image
+        clear: both;
+    }
+
+    .edgtf-author-description-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 110px;
+
+        img {
+            display: block;
+            border-radius: 4em;
+        }
+    }
+
+    .edgtf-author-description-text-holder {
+        position: relative;
+        padding-left: 140px;
+
+        .edgtf-author-name {
+            margin: 10px 0 0;
+
+            a {
+                color: $default-heading-color;
+
+                &:hover {
+                    color: $first-main-color;
+                }
+            }
+        }
+
+        .edgtf-author-email {
+            margin: 0;
+        }
+
+        .edgtf-author-text {
+            @include edgtfRelativeHolderLayout();
+
+             > p {
+                margin: 8px 0 11px;
+             }
+        }
+
+        .edgtf-author-social-icons {
+            @include edgtfRelativeHolderLayout();
+
+            a {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                padding: 0;
+                margin: 0 11px 5px 0;
+                font-size: 12px;
+                color: $default-heading-color;
+
+                &:hover {
+                    color: #999;
+                }
+            }
+        }
+    }
+}
+
+/* Single author box styles - end
+	====================================================================== */
+
+/* Related posts styles - begin
+	====================================================================== */
+
+.edgtf-related-posts-holder {
+    @include edgtfRelativeHolderLayout();
+    margin: 0 0 14px;
+    padding: 26px 40px 18px;
+    background-color: #fff;
+    @include edgtfBoxSizing(border-box);
+
+    .edgtf-related-posts-title {
+        margin: 0 0 38px;
+
+        > * {
+            margin: 0;
+        }
+    }
+
+    .edgtf-related-posts-inner {
+        margin: 0 -10px;
+    }
+
+    .edgtf-related-post {
+        position: relative;
+        display: inline-block;
+        float: left;
+        width: 25%;
+        margin: 0 0 20px;
+        padding: 0 13px;
+        @include edgtfBoxSizing(border-box);
+
+        .edgtf-related-post-image {
+            overflow: hidden;
+            position: relative;
+
+            a:after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.2);
+                content: '';
+                opacity: 0;
+                @include edgtfTransition(opacity 0.3s ease);
+            }
+        }
+
+
+        &:hover {
+            .edgtf-related-post-image a:after {
+                opacity: 1;
+            }
+        }
+
+
+        img {
+            display: block;
+        }
+
+        h5 {
+            margin: 35px 0 8px;
+            text-transform: uppercase;
+        }
+
+        .edgtf-post-info {
+            font-size: 12px;
+
+            a {
+                color: $default-text-color;
+
+                &:hover {
+                    color: $first-main-color;
+                }
+            }
+        }
+    }
+}
+
+.edgtf-column1 .edgtf-related-posts-holder,
+.edgtf-column2 .edgtf-related-posts-holder {
+
+    .edgtf-related-post {
+        width: 33.3333%;
+    }
+}
+
+/* Related posts styles - end
+	====================================================================== */
+
+/* Single posts navigation styles - begin
+    ====================================================================== */
+
+.edgtf-blog-single-navigation {
+    position: relative;
+    display: table;
+    width: 100%;
+    vertical-align: middle;
+    padding: 32px 21px;
+    margin: 0 0 14px;
+    clear: both;
+    background-color: #fff;
+    @include edgtfBoxSizing(border-box);
+
+    .edgtf-blog-single-prev,
+    .edgtf-blog-single-next {
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+        width: 50%;
+        padding: 0;
+        @include edgtfBoxSizing(border-box);
+
+        > * {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        a {
+            color: $default-heading-color;
+
+            > * {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .edgtf-blog-single-nav-mark {
+                font-size: 60px;
+                line-height: inherit;
+
+                &:before {
+                    display: block;
+                    line-height: inherit;
+                }
+            }
+
+            .edgtf-blog-single-nav-text {
+                font-size: 12px;
+                line-height: inherit;
+                font-weight: 500;
+                letter-spacing: 1.5px;
+            }
+
+            &:hover {
+                color: $first-main-color;
+            }
+        }
+
+        .edgtf-blog-single-nav-image {
+            margin: 0;
+            max-width: 154px;
+
+            img {
+                display: block;
+            }
+        }
+    }
+
+    .edgtf-blog-single-prev {
+
+        a {
+            margin: 0 15px 0 0;
+
+            .edgtf-blog-single-nav-mark {
+                left: 0;
+            }
+
+            .edgtf-blog-single-nav-text {
+                left: -10px;
+            }
+        }
+    }
+
+    .edgtf-blog-single-next {
+        text-align: right;
+
+        a {
+            margin: 0 0 0 15px;
+
+            .edgtf-blog-single-nav-mark {
+                right: 0;
+            }
+
+            .edgtf-blog-single-nav-text {
+                right: -10px;
+            }
+        }
+    }
+}
+
+.edgtf-single-links-pages{
+    margin: 20px 0 5px;
+
+    .edgtf-single-links-pages-inner {
+
+        > a,
+        > span {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 15px 5px 0;
+            font-size: 14px;
+            font-weight: 700;
+            color: $default-heading-color;
+
+            &:hover {
+                color: $first-main-color;
+            }
+        }
+    }
+}
+/* Single posts navigation styles - end
+    ====================================================================== */
+
+/* ==========================================================================
+# Blog styles - end
+========================================================================== */

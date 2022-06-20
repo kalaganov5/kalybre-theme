@@ -1,0 +1,98 @@
+/* ==========================================================================
+# Image With Text - begin
+========================================================================== */
+
+.edgtf-imwt-holder {
+    @include edgtfRelativeHolderLayout();
+    @include edgtfBoxSizing(border-box);
+    width: 100%;
+    padding-top: 100%;
+    min-height: 0;
+
+    .edgtf-imwt-inner {
+        @include edgtfAbsoluteHolderLayout();
+    }
+
+    .edgtf-imwt-table {
+        @include edgtfTableLayout();
+    }
+
+    .edgtf-imwt-cell {
+        @include edgtfTableCellLayout();
+        padding:0 15%;
+    }
+
+    .edgtf-imwt-image {
+        position: absolute;
+        z-index: 300;
+        top:calc(100% - 67px);
+        left:calc(100% - 67px);
+        width: 67px;
+        @include edgtfTransition(all .4s);
+        a {
+            @include edgtfAbsoluteHolderLayout();
+            z-index: 100;
+        }
+        img {
+            display: block;
+        }
+    }
+
+    .edgtf-imwt-image-bgrnd {
+        @include edgtfAbsoluteHolderLayout();
+        z-index: 200;
+        opacity: 0;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        visibility: hidden;
+        @include edgtfTransition(opacity .2s);
+        a {
+            @include edgtfAbsoluteHolderLayout();
+            z-index: 100;
+        }
+
+    }
+
+    .edgtf-imwt-text {
+        @include edgtfRelativeHolderLayout();
+        @include edgtfTransition(opacity .2s);
+
+        .edgtf-imwt-before-title {
+            position: relative;
+            font-size: 30px;
+            font-weight: 300;
+            margin: 0 10px 0 0;
+        }
+
+        .edgtf-imwt-title {
+            display: inline-block;
+            margin-top: 0;
+        }
+
+        .edgtf-imwt-text {
+            margin: 10px 0 0;
+        }
+
+        .edgtf-btn {
+            margin: 35px 0 0;
+        }
+    }
+
+    &.edgtf-imwt-lightbox {
+        .edgtf-imwt-image:hover {
+            ~ .edgtf-imwt-image-bgrnd {
+                opacity: 1;
+                visibility: visible;
+
+            }
+            ~ .edgtf-imwt-text {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+# Image With Text - end
+========================================================================== */

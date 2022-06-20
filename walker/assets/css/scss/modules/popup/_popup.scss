@@ -1,0 +1,184 @@
+/* ==========================================================================
+# Pop-up style - begin
+========================================================================== */
+
+.edgtf-popup-opener {
+    font-family: inherit;
+    font-size: 11px;
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+/* Style for header top */
+.edgtf-top-bar {
+
+    .edgtf-popup-opener {
+        color: #fff;
+        padding: 0 11px 0 0;
+        margin: 0 11px 0 0;
+        border-right: 1px solid #999;
+
+        &:hover {
+            color: #999;
+        }
+    }
+}
+
+/* Popup opener style - end */
+
+.edgtf-popup-holder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -webkit-transition: opacity .2s ease-out .1s, visibility .0s .4s;
+    -moz-transition: opacity .2s ease-out .1s, visibility .0s .4s;
+    transition:opacity .2s ease-out .1s, visibility .0s .4s;
+    z-index: 115;
+    visibility: hidden;
+
+    .edgtf-popup-close-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .edgtf-popup-shader {
+        top: 0;
+        left: 0;
+        position: fixed;
+        width: 110%;
+        height: 130%;
+        z-index: 1;
+        -webkit-transform-style: flat;
+        -moz-transform-style: flat;
+        transform-style: flat;
+        background-color: rgba(51, 51, 51, 0.8);
+        @include edgtfTransform(translateZ(0));
+    }
+
+    .edgtf-popup-table {
+        display: table;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 9;
+    }
+
+    .edgtf-popup-table-cell {
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .edgtf-popup-inner {
+        position: relative;        
+        display: inline-block;
+        vertical-align: middle;
+        width: 500px;
+        background-color: #fff;
+        padding: 24px;
+        opacity: 0;
+        -webkit-transition: -webkit-transform .2s ease, opacity .3s ease;
+        -moz-transition: -moz-transform .2s ease, opacity .3s ease;
+        transition:transform .2s ease, opacity .3s ease;
+        @include edgtfTransform(scale(.8) translateZ(0));
+        @include edgtfBoxSizing(border-box);
+
+        .edgtf-popup-content {
+            @include edgtfRelativeHolderLayout();
+            text-align: center;
+
+            .edgtf-popup-close {
+                position: absolute;
+                right: 5px;
+                top: 0;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 30px;
+                line-height: 1;
+                color: $default-heading-color;
+                z-index: 10;
+
+                span {
+                    display: block;
+                    line-height: inherit;
+
+                    &:before {
+                       display: block;
+                        line-height: inherit; 
+                    }
+                }
+
+                &:hover {
+                    color: $first-main-color;
+                }
+            }
+
+            .edgtf-popup-image {
+                @include edgtfRelativeHolderLayout();
+                margin: 0 0 24px;
+
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+            .edgtf-popup-title {
+                display: block;
+                margin: 0;
+            }
+
+            .edgtf-popup-subtitle {
+                display: block;
+                margin: 6px 0 0;
+            }
+
+            .edgtf-popup-form {
+                @include edgtfRelativeHolderLayout();
+                padding: 0 58px;
+                margin: 24px 0 0;
+                @include edgtfBoxSizing(border-box);
+
+                .wpcf7-form-control.wpcf7-text, 
+                .wpcf7-form-control.wpcf7-number, 
+                .wpcf7-form-control.wpcf7-date, 
+                .wpcf7-form-control.wpcf7-textarea, 
+                .wpcf7-form-control.wpcf7-select, 
+                .wpcf7-form-control.wpcf7-quiz {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+/* Popup open/close style */
+
+.edgtf-popup-opened {
+
+    .edgtf-popup-holder {
+        opacity: 1;
+        visibility: visible;
+        @include edgtfTransition(opacity .3s ease);
+
+        .edgtf-popup-inner {
+            opacity: 1;
+            @include edgtfTransform(scale(1) translateZ(0));
+            -webkit-transition: -webkit-transform 1s cubic-bezier(0.26, 0.63, 0, 0.96);
+            -moz-transition: -moz-transform 1s cubic-bezier(0.26, 0.63, 0, 0.96);
+            transition:transform 1s cubic-bezier(0.26, 0.63, 0, 0.96);
+        }
+    }
+}
+/* ==========================================================================
+# Pop-up style - end
+========================================================================== */

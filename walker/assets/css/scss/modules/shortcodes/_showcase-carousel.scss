@@ -1,0 +1,74 @@
+/* Showcase Carousel Styles - Start
+   ========================================================================== */
+
+.edgtf-showcase-carousel {
+	position: relative;
+    box-sizing: border-box;
+	overflow: hidden;
+	opacity: 0; //animate via JS
+
+	&[data-navigation='no'] {
+		padding-bottom: 100px;
+		.owl-controls {
+			display: none;
+		}
+	}
+
+	.owl-carousel {
+
+	    .owl-stage {
+	    	overflow: hidden;
+	    	&:hover {
+			    cursor: -webkit-grab;
+	        	cursor: grab;
+			}
+	    }
+	    
+	    .owl-item {
+	        @include edgtfTransform(translateZ(0));
+	    }
+	    
+	    .owl-controls {
+	        text-align: center;
+	        padding: 60px 0 0;
+	        .owl-dot {
+	            display: inline-block;
+	            position: relative;
+	            height: 12px;
+	            width: 12px;
+	            @include edgtfBorderRadius(50%);
+	            margin:6px;
+	            background-color:#b7b7b7;
+	            @include edgtfTransition(.2s);
+	            &:after {
+	                content: '';
+	                position: absolute;
+	                top:0;
+	                left:0;
+	                height: 100%;
+	                width: 100%;
+	                @include edgtfBorderRadius(50%);
+	                @include edgtfTransform(scale(.2));
+	                background-color: #333;
+	                opacity: 0;
+	                outline:1px solid outline; //moz pixelation fix
+	                -webkit-transition: opacity .15s ease-out, -webkit-transform .25s ease-out;
+	                transition: opacity .15s ease-out, transform .25s ease-out;
+	            }
+	            &.active {
+	                background-color:transparent;
+	                &:after {
+	                    opacity: 1;
+	                    @include edgtfTransform(scale(1));
+	                    -webkit-transition: opacity .2s, -webkit-transform .6s;
+	                    transition: opacity .2s, transform .6s;
+	                }
+	            }
+	        }
+	    }
+	
+	}
+}
+
+/* Showcase Carousel Styles - End
+  ========================================================================== */

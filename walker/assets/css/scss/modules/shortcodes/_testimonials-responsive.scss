@@ -1,0 +1,127 @@
+/* ==========================================================================
+# Testimonial style - begin
+========================================================================== */
+
+@include laptop-landscape-large {
+
+    .edgtf-testimonials-holder {
+
+        .edgtf-testimonial-image {
+
+            img {
+                width: auto;
+            }
+        }
+
+        .owl-controls {
+
+            .owl-prev {
+                left: -60px;
+            }
+
+            .owl-next {
+                right: -60px;
+            }
+        }
+    }
+}
+
+@include laptop-landscape {
+
+    .edgtf-testimonials-holder {
+
+        .owl-controls {
+
+            .owl-prev {
+                left: -55px;
+            }
+
+            .owl-next {
+                right: -55px;
+            }
+        }
+    }
+}
+
+@include ipad-landscape {
+
+    .edgtf-testimonials-holder {
+
+        .owl-controls {
+
+            .owl-prev {
+                left: -50px;
+            }
+
+            .owl-next {
+                right: -50px;
+            }
+        }
+    }
+}
+
+@include ipad-portrait {
+
+    .edgtf-testimonials-holder {
+
+        .edgtf-testimonials {
+
+            .owl-controls {
+
+                .owl-nav {
+                    position: relative;
+                    display: block;
+                    margin: 15px 0 0;
+                    text-align: center;
+                }
+
+                .owl-prev,
+                .owl-next {
+                    position: relative;
+                    display: inline-block;
+                    @include edgtfTransform(none);
+
+                    .edgtf-icon-arrow {
+                        font-size: 40px;
+                    }
+                }
+
+                .owl-prev {
+                    left: auto;
+                }
+
+                .owl-next {
+                    right: auto;
+                }
+            }
+        }
+    }
+}
+
+@include phone-landscape {
+
+    .edgtf-testimonials-holder {
+
+        .edgtf-testimonials {
+
+            .edgtf-testimonial-text-inner {
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+            }
+
+            .edgtf-testimonial-content .edgtf-testimonial-content-inner i {
+                float: none;
+            }
+
+            .edgtf-testimonial-text,
+            .edgtf-testimonial-author {
+                padding: 0;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+# Testimonial style - end
+========================================================================== */

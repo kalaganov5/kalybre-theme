@@ -1,0 +1,227 @@
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/assets/custom-styles/general-custom-styles.php walker_edge_design_styles function */
+.edgtf-preload-background { background-image: url(https://www.kalybre.com/wp-content/themes/walker/assets/img/preload_pattern.png) !important;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/assets/custom-styles/general-custom-styles.php walker_edge_design_styles function */
+body { font-family: Montserrat;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/assets/custom-styles/general-custom-styles.php walker_edge_design_styles function */
+.edgtf-boxed .edgtf-wrapper { background-attachment: fixed;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/assets/custom-styles/general-custom-styles.php walker_edge_design_styles function */
+body.archive:not(.woocommerce-page) .edgtf-content > .edgtf-content-inner > .edgtf-container { background-color: #f4f4f4;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/assets/custom-styles/general-custom-styles.php walker_edge_content_styles function */
+.edgtf-content .edgtf-content-inner > .edgtf-container > .edgtf-container-inner { padding-top: 70px;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/assets/custom-styles/general-custom-styles.php walker_edge_text_styles function */
+p { color: #333333;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/assets/custom-styles/general-custom-styles.php walker_edge_link_styles function */
+a, p a { color: #002bba;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/assets/custom-styles/general-custom-styles.php walker_edge_link_hover_styles function */
+a:hover, p a:hover { color: #2363ed;text-decoration: underline;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/assets/custom-styles/general-custom-styles.php walker_edge_link_hover_styles function */
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover { color: #2363ed;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/assets/custom-styles/general-custom-styles.php walker_edge_smooth_page_transition_styles function */
+.edgtf-st-loader .edgtf-rotate-circles > div, .edgtf-st-loader .pulse, .edgtf-st-loader .double_pulse .double-bounce1, .edgtf-st-loader .double_pulse .double-bounce2, .edgtf-st-loader .cube, .edgtf-st-loader .rotating_cubes .cube1, .edgtf-st-loader .rotating_cubes .cube2, .edgtf-st-loader .stripes > div, .edgtf-st-loader .wave > div, .edgtf-st-loader .two_rotating_circles .dot1, .edgtf-st-loader .two_rotating_circles .dot2, .edgtf-st-loader .five_rotating_circles .container1 > div, .edgtf-st-loader .five_rotating_circles .container2 > div, .edgtf-st-loader .five_rotating_circles .container3 > div, .edgtf-st-loader .atom .ball-1:before, .edgtf-st-loader .atom .ball-2:before, .edgtf-st-loader .atom .ball-3:before, .edgtf-st-loader .atom .ball-4:before, .edgtf-st-loader .clock .ball:before, .edgtf-st-loader .mitosis .ball, .edgtf-st-loader .lines .line1, .edgtf-st-loader .lines .line2, .edgtf-st-loader .lines .line3, .edgtf-st-loader .lines .line4, .edgtf-st-loader .fussion .ball, .edgtf-st-loader .fussion .ball-1, .edgtf-st-loader .fussion .ball-2, .edgtf-st-loader .fussion .ball-3, .edgtf-st-loader .fussion .ball-4, .edgtf-st-loader .wave_circles .ball, .edgtf-st-loader .pulse_circles .ball { background-color: #b2b2b2;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_text_styles_1 function */
+.cf7_custom_style_1 ::-webkit-input-placeholder { color: #8d8d8d;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_text_styles_1 function */
+.cf7_custom_style_1 :-moz-placeholder { color: #8d8d8d;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_text_styles_1 function */
+.cf7_custom_style_1 ::-moz-placeholder { color: #8d8d8d;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_text_styles_1 function */
+.cf7_custom_style_1 :-ms-input-placeholder { color: #8d8d8d;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_text_styles_1 function */
+.cf7_custom_style_1 textarea.wpcf7-form-control.wpcf7-textarea { height: 250px;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_text_styles_1 function */
+.cf7_custom_style_1 input.wpcf7-form-control.wpcf7-text, .cf7_custom_style_1 input.wpcf7-form-control.wpcf7-number, .cf7_custom_style_1 input.wpcf7-form-control.wpcf7-date, .cf7_custom_style_1 textarea.wpcf7-form-control.wpcf7-textarea, .cf7_custom_style_1 select.wpcf7-form-control.wpcf7-select, .cf7_custom_style_1 input.wpcf7-form-control.wpcf7-quiz { color: #8d8d8d;font-size: 12px;line-height: 20px;font-weight: 500;letter-spacing: 1px;background-color: rgba(255, 255, 255, 1);border-color: rgba(255, 255, 255, 1);}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_focus_styles_1 function */
+.cf7_custom_style_1 input:focus::-webkit-input-placeholder, .cf7_custom_style_1 textarea:focus::-webkit-input-placeholder { color: #333333;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_focus_styles_1 function */
+.cf7_custom_style_1 input:focus:-moz-placeholder, .cf7_custom_style_1 textarea:focus:-moz-placeholder { color: #333333;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_focus_styles_1 function */
+.cf7_custom_style_1 input:focus::-moz-placeholder, .cf7_custom_style_1 textarea:focus::-moz-placeholder { color: #333333;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_focus_styles_1 function */
+.cf7_custom_style_1 input:focus:-ms-input-placeholder, .cf7_custom_style_1 textarea:focus:-ms-input-placeholder { color: #333333;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_focus_styles_1 function */
+.cf7_custom_style_1 input.wpcf7-form-control.wpcf7-text:focus, .cf7_custom_style_1 input.wpcf7-form-control.wpcf7-number:focus, .cf7_custom_style_1 input.wpcf7-form-control.wpcf7-date:focus, .cf7_custom_style_1 textarea.wpcf7-form-control.wpcf7-textarea:focus, .cf7_custom_style_1 select.wpcf7-form-control.wpcf7-select:focus, .cf7_custom_style_1 input.wpcf7-form-control.wpcf7-quiz:focus { color: #333333;background-color: rgba(255, 255, 255, 1);border-color: rgba(255, 255, 255, 1);}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_button_styles_1 function */
+.cf7_custom_style_1 input.wpcf7-form-control.wpcf7-submit { color: #ffffff;font-size: 11px;height: 54px;font-weight: 500;background-color: rgba(51, 51, 51, 1);border-color: rgba(51, 51, 51, 1);padding-left: 43px;padding-right: 43px;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_button_hover_styles_1 function */
+.cf7_custom_style_1 input.wpcf7-form-control.wpcf7-submit:not([disabled]):hover { color: #ffffff;background-color: rgba(93, 93, 93, 1);border-color: rgba(93, 93, 93, 1);}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_text_styles_2 function */
+.cf7_custom_style_2 ::-webkit-input-placeholder { color: #999999;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_text_styles_2 function */
+.cf7_custom_style_2 :-moz-placeholder { color: #999999;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_text_styles_2 function */
+.cf7_custom_style_2 ::-moz-placeholder { color: #999999;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_text_styles_2 function */
+.cf7_custom_style_2 :-ms-input-placeholder { color: #999999;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_text_styles_2 function */
+.cf7_custom_style_2 input.wpcf7-form-control.wpcf7-text, .cf7_custom_style_2 input.wpcf7-form-control.wpcf7-number, .cf7_custom_style_2 input.wpcf7-form-control.wpcf7-date, .cf7_custom_style_2 textarea.wpcf7-form-control.wpcf7-textarea, .cf7_custom_style_2 select.wpcf7-form-control.wpcf7-select, .cf7_custom_style_2 input.wpcf7-form-control.wpcf7-quiz { color: #999999;font-size: 12px;font-family: Raleway;font-style: normal;font-weight: 500;text-transform: none;letter-spacing: 0px;background-color: rgba(255, 255, 255, 1);border-color: rgba(255, 255, 255, 1);}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_focus_styles_2 function */
+.cf7_custom_style_2 input:focus::-webkit-input-placeholder, .cf7_custom_style_2 textarea:focus::-webkit-input-placeholder { color: #333333;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_focus_styles_2 function */
+.cf7_custom_style_2 input:focus:-moz-placeholder, .cf7_custom_style_2 textarea:focus:-moz-placeholder { color: #333333;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_focus_styles_2 function */
+.cf7_custom_style_2 input:focus::-moz-placeholder, .cf7_custom_style_2 textarea:focus::-moz-placeholder { color: #333333;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_focus_styles_2 function */
+.cf7_custom_style_2 input:focus:-ms-input-placeholder, .cf7_custom_style_2 textarea:focus:-ms-input-placeholder { color: #333333;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_focus_styles_2 function */
+.cf7_custom_style_2 input.wpcf7-form-control.wpcf7-text:focus, .cf7_custom_style_2 input.wpcf7-form-control.wpcf7-number:focus, .cf7_custom_style_2 input.wpcf7-form-control.wpcf7-date:focus, .cf7_custom_style_2 textarea.wpcf7-form-control.wpcf7-textarea:focus, .cf7_custom_style_2 select.wpcf7-form-control.wpcf7-select:focus, .cf7_custom_style_2 input.wpcf7-form-control.wpcf7-quiz:focus { color: #333333;background-color: rgba(255, 255, 255, 1);border-color: rgba(255, 255, 255, 1);}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_button_styles_2 function */
+.cf7_custom_style_2 input.wpcf7-form-control.wpcf7-submit { color: #999999;background-color: rgba(255, 255, 255, 1);border-color: rgba(255, 255, 255, 1);padding-left: 36px;padding-right: 36px;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_button_hover_styles_2 function */
+.cf7_custom_style_2 input.wpcf7-form-control.wpcf7-submit:not([disabled]):hover { color: #333333;background-color: rgba(255, 255, 255, 1);border-color: rgba(255, 255, 255, 1);}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_text_styles_3 function */
+.cf7_custom_style_3 ::-webkit-input-placeholder { color: #8d8d8d;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_text_styles_3 function */
+.cf7_custom_style_3 :-moz-placeholder { color: #8d8d8d;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_text_styles_3 function */
+.cf7_custom_style_3 ::-moz-placeholder { color: #8d8d8d;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_text_styles_3 function */
+.cf7_custom_style_3 :-ms-input-placeholder { color: #8d8d8d;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_text_styles_3 function */
+.cf7_custom_style_3 textarea.wpcf7-form-control.wpcf7-textarea { height: 154px;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_text_styles_3 function */
+.cf7_custom_style_3 input.wpcf7-form-control.wpcf7-text, .cf7_custom_style_3 input.wpcf7-form-control.wpcf7-number, .cf7_custom_style_3 input.wpcf7-form-control.wpcf7-date, .cf7_custom_style_3 textarea.wpcf7-form-control.wpcf7-textarea, .cf7_custom_style_3 select.wpcf7-form-control.wpcf7-select, .cf7_custom_style_3 input.wpcf7-form-control.wpcf7-quiz { color: #8d8d8d;font-size: 12px;line-height: 20px;font-weight: 500;letter-spacing: 1px;background-color: rgba(255, 255, 255, 1);border-color: rgba(204, 204, 204, 1);border-width: 1px;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_focus_styles_3 function */
+.cf7_custom_style_3 input:focus::-webkit-input-placeholder, .cf7_custom_style_3 textarea:focus::-webkit-input-placeholder { color: #333333;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_focus_styles_3 function */
+.cf7_custom_style_3 input:focus:-moz-placeholder, .cf7_custom_style_3 textarea:focus:-moz-placeholder { color: #333333;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_focus_styles_3 function */
+.cf7_custom_style_3 input:focus::-moz-placeholder, .cf7_custom_style_3 textarea:focus::-moz-placeholder { color: #333333;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_focus_styles_3 function */
+.cf7_custom_style_3 input:focus:-ms-input-placeholder, .cf7_custom_style_3 textarea:focus:-ms-input-placeholder { color: #333333;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_focus_styles_3 function */
+.cf7_custom_style_3 input.wpcf7-form-control.wpcf7-text:focus, .cf7_custom_style_3 input.wpcf7-form-control.wpcf7-number:focus, .cf7_custom_style_3 input.wpcf7-form-control.wpcf7-date:focus, .cf7_custom_style_3 textarea.wpcf7-form-control.wpcf7-textarea:focus, .cf7_custom_style_3 select.wpcf7-form-control.wpcf7-select:focus, .cf7_custom_style_3 input.wpcf7-form-control.wpcf7-quiz:focus { color: #333333;background-color: rgba(255, 255, 255, 1);border-color: rgba(204, 204, 204, 1);}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_button_styles_3 function */
+.cf7_custom_style_3 input.wpcf7-form-control.wpcf7-submit { color: #ffffff;height: 54px;background-color: rgba(51, 51, 51, 1);border-width: 0px;padding-left: 43px;padding-right: 43px;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/contactform7/custom-styles/contact-form.php walker_edge_contact_form7_button_hover_styles_3 function */
+.cf7_custom_style_3 input.wpcf7-form-control.wpcf7-submit:not([disabled]):hover { color: #ffffff;background-color: rgba(93, 93, 93, 1);}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/error404/custom-styles/custom-styles.php walker_edge_404_title_styles function */
+.edgtf-404-page .edgtf-page-not-found h1 { color: #ffffff;letter-spacing: 2px;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/error404/custom-styles/custom-styles.php walker_edge_404_subtitle_styles function */
+.edgtf-404-page .edgtf-page-not-found h3 { color: #ffffff;letter-spacing: 2px;text-transform: uppercase;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/footer/custom-styles/custom-styles.php walker_edge_footer_top_general_styles function */
+footer .edgtf-footer-top-holder { background-color: #333333;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/footer/custom-styles/custom-styles.php walker_edge_footer_top_general_styles function */
+footer .edgtf-footer-top:not(.edgtf-footer-top-full) .edgtf-container-inner, footer .edgtf-footer-top.edgtf-footer-top-full { padding-top: 55px;padding-bottom: 40px;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/footer/custom-styles/custom-styles.php walker_edge_footer_top_title_styles function */
+.edgtf-footer-top-holder .widget > .edgtf-footer-widget-title { color: #ffffff;font-family: Raleway;font-size: 14px;font-style: normal;font-weight: 700;letter-spacing: 2px;text-transform: capitalize;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/footer/custom-styles/custom-styles.php walker_edge_footer_bottom_general_styles function */
+footer .edgtf-footer-bottom-holder { height: 20px;background-color: #333333;border: 1px solid #333333;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/header/custom-styles/header.php walker_edge_header_top_bar_styles function */
+.edgtf-top-bar { height: 32px;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/header/custom-styles/header.php walker_edge_header_top_bar_styles function */
+.edgtf-top-bar .edgtf-logo-wrapper a { max-height: 32px;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/header/custom-styles/header.php walker_edge_header_top_bar_styles function */
+.edgtf-top-bar { background-color: rgba(255, 255, 255, 1);}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/header/custom-styles/header.php walker_edge_header_standard_menu_area_styles function */
+.edgtf-header-standard .edgtf-page-header { background-color: rgba(255, 255, 255, 1);}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/header/custom-styles/header.php walker_edge_header_simple_menu_area_styles function */
+.edgtf-header-simple .edgtf-page-header { background-color: rgba(255, 255, 255, 1);}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/header/custom-styles/header.php walker_edge_sticky_header_styles function */
+.edgtf-page-header .edgtf-sticky-header .edgtf-sticky-holder { background-color: rgba(255, 255, 255, 1);}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/header/custom-styles/header.php walker_edge_fixed_header_styles function */
+.edgtf-page-header .edgtf-fixed-wrapper.fixed .edgtf-menu-area { background-color: rgba(255, 255, 255, 1)!important;}
+
+            .edgtf-main-menu > ul > li > a {
+                                                                         font-weight: 700;                                     }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                
+        
+        
+        /* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/header/custom-styles/mobile-header.php walker_edge_mobile_header_general_styles function */
+.edgtf-mobile-header .edgtf-mobile-header-inner { height: 55px;}
+
+            @media only screen and (max-width: 1024px) {
+            /* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/header/custom-styles/mobile-header.php walker_edge_mobile_logo_styles function */
+.edgtf-mobile-header .edgtf-mobile-logo-wrapper a { height: 40px !important;}
+
+            }
+                    @media only screen and (max-width: 480px) {
+            /* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/header/custom-styles/mobile-header.php walker_edge_mobile_logo_styles function */
+.edgtf-mobile-header .edgtf-mobile-logo-wrapper a { height: 40px !important;}
+
+            }
+        /* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/header/custom-styles/mobile-header.php walker_edge_mobile_logo_styles function */
+.edgtf-mobile-header .edgtf-mobile-logo-wrapper a { max-height: 55px;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/header/custom-styles/mobile-header.php walker_edge_mobile_icon_styles function */
+.edgtf-mobile-header .edgtf-mobile-menu-opener a { font-size: 30px;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/sidearea/custom-styles/sidearea.php walker_edge_side_area_slide_from_right_type_style function */
+.edgtf-side-menu-slide-from-right .edgtf-side-menu { right: -430px;width: 430px;}
+
+/* generated in /home/customer/www/kalybre.com/public_html/wp-content/themes/walker/framework/modules/sidearea/custom-styles/sidearea.php walker_edge_side_area_alignment function */
+.edgtf-side-menu-slide-from-right .edgtf-side-menu { text-align: left;}
+

@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Section Title shortcode styles - start
+   ========================================================================== */
+
+.edgtf-st-holder {
+    @include edgtfRelativeHolderLayout();
+
+	.edgtf-st-left-separator,
+	.edgtf-st-right-separator,
+	.edgtf-st-title {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.edgtf-st-left-separator,
+	.edgtf-st-right-separator {
+		span {
+			display: block;
+			height: 1px;
+			background-color: #ccc;
+		}
+	}
+
+	.edgtf-st-title {
+		width: 2%;
+		white-space: nowrap;
+
+		span {
+			display: block;
+		}
+	}
+
+	&.edgtf-st-title-position-center {
+
+		.edgtf-st-title {
+			padding: 0 40px;
+		}
+
+		.edgtf-st-left-separator,
+		.edgtf-st-right-separator {
+			width: 48%;
+		}
+
+	}
+
+	&.edgtf-st-title-position-left {
+
+		.edgtf-st-title {
+			padding: 0 15px 0 0;
+		}
+
+		.edgtf-st-left-separator {
+			width: 0%;
+		}
+		.edgtf-st-right-separator {
+			width: 96%;
+		}
+
+	}
+
+}
+
+/* ==========================================================================
+   Section Title shortcode styles - end
+   ========================================================================== */

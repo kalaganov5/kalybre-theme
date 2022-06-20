@@ -1,0 +1,191 @@
+/* ==========================================================================
+# Woocommerce Product List Animated Shortcode responsive style - begin
+========================================================================== */
+
+@media only screen and (max-width: $laptop-landscape-large) {
+
+    .edgtf-pla-holder {
+
+        $animated_list_columns: ('six');
+
+        @for $i from 0 to length($animated_list_columns) { 
+            &.edgtf-#{nth($animated_list_columns,$i+1)}-columns {
+                $column_width: 100%/5;
+
+                .edgtf-pla-item {
+                    width: $column_width;
+
+                    @media only screen and (min-width: $laptop-landscape-plus-pixel) {
+                        &:nth-child(6n+1) {
+                            clear: none;
+                        }
+
+                        &:nth-child(5n+1) {
+                            clear: both;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+
+    .edgtf-pla-holder {
+
+        .edgtf-pla-inner {
+
+            .edgtf-pla-text-inner {
+
+                .button,
+                .added_to_cart {
+                    height: 44px;
+                    line-height: 44px;
+                    padding: 0 36px;
+                }
+            }
+        }
+
+        .edgtf-pla-text-wrapper {
+            margin: 0 0 20px;
+
+            .edgtf-pla-title {
+                margin: 24px 0 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $laptop-landscape) {
+
+    .edgtf-pla-holder {
+
+        $animated_list_columns: ('five', 'six');
+
+        @for $i from 0 to length($animated_list_columns) { 
+            &.edgtf-#{nth($animated_list_columns,$i+1)}-columns {
+                $column_width: 100%/4;
+
+                .edgtf-pla-item {
+                    width: $column_width;
+                    $animated_list_columns_label: #{nth($animated_list_columns,$i+1)};
+                    
+                    @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+                        @if $animated_list_columns_label == "five" {
+                            &:nth-child(5n+1) {
+                                clear: none;
+                            }
+                        } @else if $animated_list_columns_label == "six" {
+                            &:nth-child(6n+1) {
+                                clear: none;
+                            }
+                        }
+                        
+                        &:nth-child(4n+1) {
+                            clear: both;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $ipad-landscape) {
+
+    .edgtf-pla-holder {
+
+        $animated_list_columns_clear: ('two', 'three');
+        $animated_list_columns: ('four', 'five', 'six');
+
+        @for $i from 0 to length($animated_list_columns) { 
+            &.edgtf-#{nth($animated_list_columns,$i+1)}-columns {
+                $column_width: 100%/3;
+
+                .edgtf-pla-item {
+                    width: $column_width;
+
+                    @media only screen and (min-width: $ipad-portrait-plus-pixel) {
+                        &:nth-child(3n+1) {
+                            clear: both;
+                        }
+                    }
+                }
+            }
+        }
+
+        @for $i from 0 to length($animated_list_columns_clear) { 
+            &.edgtf-#{nth($animated_list_columns_clear,$i+1)}-columns {
+
+                .edgtf-pla-item {
+
+                    @media only screen and (min-width: $ipad-portrait-plus-pixel) {
+                        &:nth-child(#{$i+2}n+1) {
+                            clear: both;
+                        }
+                    }
+                }
+            }
+        }                
+    }
+}
+
+@media only screen and (max-width: $ipad-portrait) {
+
+    .edgtf-pla-holder {
+
+        $animated_list_columns: ('two', 'three', 'four', 'five', 'six');
+
+        @for $i from 0 to length($animated_list_columns) { 
+            &.edgtf-#{nth($animated_list_columns,$i+1)}-columns {
+                $column_width: 50%;
+
+                .edgtf-pla-item {
+                    width: $column_width;
+
+                    @media only screen and (min-width: $phone-landscape-plus-pixel) {
+                        &:nth-child(2n+1) {
+                            clear: both;
+                        }
+                    }
+                }
+            }
+        }
+
+        .edgtf-pla-inner {
+
+            .edgtf-pla-text-inner {
+
+                .button,
+                .added_to_cart {
+                    height: 38px;
+                    line-height: 38px;
+                    padding: 0 27px;
+                    letter-spacing: 1px;
+                }
+            }
+        }           
+    }
+}
+
+@media only screen and (max-width: $phone-landscape) {
+
+    .edgtf-pla-holder {
+
+        $animated_list_columns: ('two', 'three', 'four', 'five', 'six');
+
+        @for $i from 0 to length($animated_list_columns) { 
+            &.edgtf-#{nth($animated_list_columns,$i+1)}-columns {
+                $column_width: 100%;
+
+                .edgtf-pla-item {
+                    width: $column_width;
+                }  
+            }
+        }             
+    }
+}
+/* ==========================================================================
+# Woocommerce Product List Animated Shortcode responsive style - end
+========================================================================== */

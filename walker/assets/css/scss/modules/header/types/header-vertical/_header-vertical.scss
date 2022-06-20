@@ -1,0 +1,58 @@
+@import "blocks/logo";
+@import "blocks/widgets";
+@import "blocks/navigation/navigation";
+
+.edgtf-header-vertical {
+
+    .edgtf-content,
+    footer {
+        padding-left: $vertical-menu-width;
+        @include edgtfBoxSizing(border-box);
+    }
+
+    .edgtf-vertical-menu-area {
+        position: fixed;
+        width: $vertical-menu-width;
+        top: 0;
+        left: 0;
+        height: 100%;
+        padding: 60px 40px 10px;
+        background-color: transparent;
+        outline: none;
+        z-index: 101;
+        -webkit-backface-visibility: hidden;
+        @include edgtfBoxSizing(border-box);
+    }
+
+    .edgtf-vertical-menu-area-inner {
+        @include edgtfRelativeHolderLayout();
+        height: 100%;
+
+        &.edgtf-vertical-align-center {
+            text-align: center;
+
+            .edgtf-logo-wrapper img {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .edgtf-vertical-menu-area.edgtf-with-scroll {
+        overflow: hidden;
+    }
+
+    .edgtf-vertical-area-background {
+        position: fixed;
+        width: $vertical-menu-width;
+        height: 100%;
+        background-position: right top;
+        background-repeat: no-repeat;
+        background-color: $default-heading-color;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        opacity: 1;
+        @include edgtfTransition(opacity 0.5s ease, background-color 0.5s ease);
+    }
+}

@@ -1,0 +1,146 @@
+/*------------------------------------------------------------------
+ * This is main responsive css file for theme. It is broken into following sections:
+ * 1.  Global responsive styles
+ * 2.  Header responsive styles
+ * 3.  Footer responsive styles
+ * 4.  Title area responsive styles
+ * 5.  Search functionality responsive styles
+ * 6.  Popup responsive styles 
+ * 7.  Blog responsive styles
+ * 8. Shortcodes styles
+ * 9. Widgets styles
+-------------------------------------------------------------------*/
+
+/* ==========================================================================
+   1. Global responsive styles
+   ========================================================================== */
+@import 'variables';
+@import 'mixins';
+@import 'global-responsive';
+
+/* ==========================================================================
+   2. Header responsive styles
+   ========================================================================== */
+@import 'modules/header/header-responsive';
+
+/* ==========================================================================
+   3. Footer responsive styles
+   ========================================================================== */
+@import 'modules/footer/footer-responsive';
+
+/* ==========================================================================
+   4. Title area responsive styles
+   ========================================================================== */
+@import 'modules/title/title-responsive';
+
+/* ==========================================================================
+   5. Search functionality responsive styles
+   ========================================================================== */
+@import 'modules/search/search-responsive';
+
+/* ==========================================================================
+   6. Popup styles
+   ========================================================================== */
+@import 'modules/popup/popup-responsive';
+
+/* ==========================================================================
+   7. Blog responsive styles
+   ========================================================================== */
+@import 'modules/blog/blog-responsive';
+
+/* ==========================================================================
+   8. Shortcodes responsive styles
+   ========================================================================== */
+
+/* Blog List responsive styles
+   ========================================================================== */
+@import 'modules/shortcodes/blog-list-responsive';
+
+/* Button responsive styles
+   ========================================================================== */
+@import 'modules/shortcodes/button-responsive';
+
+/* Call To Action responsive styles
+   ========================================================================== */
+@import 'modules/shortcodes/calltoaction-responsive';
+
+/* Countdown responsive styles
+   ========================================================================== */
+@import 'modules/shortcodes/countdown-responsive';
+
+/* Counter responsive styles
+   ========================================================================== */
+@import 'modules/shortcodes/counter-responsive';
+
+/* Elements Holder responsive styles
+   ========================================================================== */
+@import 'modules/shortcodes/elements-holder-responsive';
+
+/* Frame Slider responsive styles
+   ========================================================================== */
+@import 'modules/shortcodes/frame-slider-responsive';
+
+/* Google Map responsive styles
+   ========================================================================== */
+@import 'modules/shortcodes/google-map-responsive';
+
+/* Icon List Item responsive styles
+   ========================================================================== */
+@import 'modules/shortcodes/icon-list-item-responsive';
+
+/* Image With Text responsive styles
+   ========================================================================== */
+@import 'modules/shortcodes/image-with-text-responsive';
+
+/* Image Gallery responsive styles
+   ========================================================================== */
+@import 'modules/shortcodes/imagegallery-responsive';
+
+/* Interactive Banner responsive styles
+   ========================================================================== */
+@import 'modules/shortcodes/interactive-banner-responsive';
+
+/* Message responsive styles
+   ========================================================================== */
+@import 'modules/shortcodes/message-responsive';
+
+/* Parallax Sections responsive styles
+   ========================================================================== */
+@import 'modules/shortcodes/parallax-sections-responsive';
+
+/* Portfolio responsive styles
+   ========================================================================== */
+@import 'modules/shortcodes/portfolio-responsive';
+
+/* Pricing Tables responsive styles
+   ========================================================================== */
+@import 'modules/shortcodes/pricing-tables-responsive';
+
+/* Slider responsive styles
+   ========================================================================== */
+@import 'modules/shortcodes/slider-responsive';
+
+/* Tabs responsive styles
+   ========================================================================== */
+@import 'modules/shortcodes/tabs-responsive';
+
+/* Team Carousels responsive styles
+   ========================================================================== */
+@import 'modules/shortcodes/team-carousels-responsive';
+
+/* Testimonials responsive styles
+   ========================================================================== */
+@import 'modules/shortcodes/testimonials-responsive';
+
+/* Section Title responsive styles
+   ========================================================================== */
+@import 'modules/shortcodes/section-title-responsive';
+
+/* Showcase Carousel responsive styles
+   ========================================================================== */
+@import 'modules/shortcodes/showcase-carousel-responsive.scss';
+
+/* ==========================================================================
+   9. Widgets responsive styles
+   ========================================================================== */
+@import 'modules/widgets/instagram-responsive';
